@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.10)  10 NOV 2025 11:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.10)  10 NOV 2025 12:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1240,7 +1240,7 @@ Here is how much of TeX's memory you used:
  58278 multiletter control sequences out of 15000+600000
  643991 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,18n,104p,1182b,1073s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,18n,104p,1227b,1073s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\niave\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc
 1000.pk> <C:\Users\niave\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
 0\ecrm1440.pk> <C:\Users\niave\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
@@ -1264,7 +1264,7 @@ Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/niave/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/niave/
 AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users
 /niave/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on "Laboratoire 2.pdf" (4 pages, 235273 bytes).
+Output written on "Laboratoire 2.pdf" (4 pages, 235309 bytes).
 PDF statistics:
  408 PDF objects out of 1000 (max. 8388607)
  21 named destinations out of 1000 (max. 500000)
