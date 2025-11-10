@@ -1,0 +1,20 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity CelluleType is
+    port(
+        A   : in  std_logic;
+        B   : in  std_logic;
+        x   : in  std_logic;  -- input carry / previous stage
+        y   : in  std_logic;  -- input D / previous stage
+        F_C : out std_logic;  -- output carry
+        F_D : out std_logic   -- output D
+    );
+end CelluleType;
+
+architecture CelluleType_arch of CelluleType is
+begin
+    -- combinational logic
+    F_C <= (x or y) and (y or A) and (x or (not A) or B);
+    F_D <= (x or B) and ((not B) or y) and (x or (not A));
+end CelluleType_arch;
