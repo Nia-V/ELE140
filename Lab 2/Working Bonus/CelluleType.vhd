@@ -17,7 +17,7 @@ begin
 process (A,B,x,y)
 begin
     -- combinational logic
-F_C <= (y and not A) or (x and not B) or (x and A);
-F_D <= (y and B) or (x and A and not B) or (x and y);
+F_C <=  (y and not A) or (y and B) or (x and not B) or (x and A);
+F_D <= (y and not (A) and B) or (x and A and not B) or (x and y);
 end process;
 end CelluleType_arch;

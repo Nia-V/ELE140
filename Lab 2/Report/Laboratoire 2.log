@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.10)  10 NOV 2025 11:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.10)  10 NOV 2025 11:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1202,15 +1202,6 @@ Overfull \hbox (34.28743pt too wide) in paragraph at lines 205--206
  []
 
 
-Overfull \vbox (6.78632pt too high) detected at line 234
- []
-
-
-Overfull \vbox (6.78632pt too high) detected at line 234
- []
-
-[3]
-
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 237.
 
@@ -1234,20 +1225,18 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 237.
 
-[4
-
-] (Laboratoire 2.aux)
+[3] (Laboratoire 2.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
  ***********
 Package rerunfilecheck Info: File `"Laboratoire 2".out' has not changed.
-(rerunfilecheck)             Checksum: CD20555293F3120FB0A5A40A8148E7A8;1569.
+(rerunfilecheck)             Checksum: 0975AE109D4E127FDC595FFA2762A8D2;1558.
  ) 
 Here is how much of TeX's memory you used:
- 29935 strings out of 467871
- 577555 string characters out of 5418375
- 1027333 words of memory out of 5000000
+ 29934 strings out of 467871
+ 577549 string characters out of 5418375
+ 1052333 words of memory out of 5000000
  58278 multiletter control sequences out of 15000+600000
  643991 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1275,9 +1264,9 @@ Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/niave/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/niave/
 AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users
 /niave/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on "Laboratoire 2.pdf" (5 pages, 236051 bytes).
+Output written on "Laboratoire 2.pdf" (4 pages, 235273 bytes).
 PDF statistics:
- 412 PDF objects out of 1000 (max. 8388607)
- 22 named destinations out of 1000 (max. 500000)
+ 408 PDF objects out of 1000 (max. 8388607)
+ 21 named destinations out of 1000 (max. 500000)
  74 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,189 +1,80 @@
-|intergrationCompNBits
-HEX0[6] <= CompNBits:inst.segb[6]
-HEX0[5] <= CompNBits:inst.segb[5]
-HEX0[4] <= CompNBits:inst.segb[4]
-HEX0[3] <= CompNBits:inst.segb[3]
-HEX0[2] <= CompNBits:inst.segb[2]
-HEX0[1] <= CompNBits:inst.segb[1]
-HEX0[0] <= CompNBits:inst.segb[0]
-SW[0] => CompNBits:inst.B[3]
-SW[1] => CompNBits:inst.B[2]
-SW[2] => CompNBits:inst.B[1]
-SW[3] => CompNBits:inst.B[0]
-SW[4] => ~NO_FANOUT~
-SW[5] => ~NO_FANOUT~
-SW[6] => CompNBits:inst.A[3]
-SW[7] => CompNBits:inst.A[2]
-SW[8] => CompNBits:inst.A[1]
-SW[9] => CompNBits:inst.A[0]
-HEX1[6] <= CompNBits:inst.s_b
-HEX2[6] <= CompNBits:inst.who[6]
-HEX2[5] <= CompNBits:inst.who[5]
-HEX2[4] <= CompNBits:inst.who[4]
-HEX2[3] <= CompNBits:inst.who[3]
-HEX2[2] <= CompNBits:inst.who[2]
-HEX2[1] <= CompNBits:inst.who[1]
-HEX2[0] <= CompNBits:inst.who[0]
-HEX4[6] <= CompNBits:inst.sega[6]
-HEX4[5] <= CompNBits:inst.sega[5]
-HEX4[4] <= CompNBits:inst.sega[4]
-HEX4[3] <= CompNBits:inst.sega[3]
-HEX4[2] <= CompNBits:inst.sega[2]
-HEX4[1] <= CompNBits:inst.sega[1]
-HEX4[0] <= CompNBits:inst.sega[0]
-HEX5[6] <= CompNBits:inst.s_a
-
-
-|intergrationCompNBits|CompNBits:inst
-A[3] => Mux0.IN19
-A[3] => Mux1.IN19
-A[3] => Mux2.IN19
-A[3] => Mux3.IN10
-A[3] => Mux4.IN10
-A[3] => Mux5.IN19
-A[3] => Mux6.IN19
+|CompNBits
 A[3] => CelluleType:gen_cells:3:cell_inst.A
-A[2] => Mux0.IN18
-A[2] => Mux1.IN18
-A[2] => Mux2.IN18
-A[2] => Mux3.IN9
-A[2] => Mux4.IN9
-A[2] => Mux5.IN18
-A[2] => Mux6.IN18
 A[2] => CelluleType:gen_cells:2:cell_inst.A
-A[1] => Mux0.IN17
-A[1] => Mux1.IN17
-A[1] => Mux2.IN17
-A[1] => Mux3.IN8
-A[1] => Mux4.IN8
-A[1] => Mux5.IN17
-A[1] => Mux6.IN17
 A[1] => CelluleType:gen_cells:1:cell_inst.A
-A[0] => Mux0.IN16
-A[0] => Mux1.IN16
-A[0] => Mux2.IN16
-A[0] => Mux5.IN16
-A[0] => Mux6.IN16
 A[0] => CelluleType:gen_cells:0:cell_inst.A
-A[0] => s_a.DATAIN
-B[3] => Mux7.IN19
-B[3] => Mux8.IN19
-B[3] => Mux9.IN19
-B[3] => Mux10.IN10
-B[3] => Mux11.IN10
-B[3] => Mux12.IN19
-B[3] => Mux13.IN19
 B[3] => CelluleType:gen_cells:3:cell_inst.B
-B[2] => Mux7.IN18
-B[2] => Mux8.IN18
-B[2] => Mux9.IN18
-B[2] => Mux10.IN9
-B[2] => Mux11.IN9
-B[2] => Mux12.IN18
-B[2] => Mux13.IN18
 B[2] => CelluleType:gen_cells:2:cell_inst.B
-B[1] => Mux7.IN17
-B[1] => Mux8.IN17
-B[1] => Mux9.IN17
-B[1] => Mux10.IN8
-B[1] => Mux11.IN8
-B[1] => Mux12.IN17
-B[1] => Mux13.IN17
 B[1] => CelluleType:gen_cells:1:cell_inst.B
-B[0] => Mux7.IN16
-B[0] => Mux8.IN16
-B[0] => Mux9.IN16
-B[0] => Mux12.IN16
-B[0] => Mux13.IN16
 B[0] => CelluleType:gen_cells:0:cell_inst.B
-B[0] => s_b.DATAIN
-PP <= PP.DB_MAX_OUTPUT_PORT_TYPE
-PG <= PG.DB_MAX_OUTPUT_PORT_TYPE
-EG <= EG.DB_MAX_OUTPUT_PORT_TYPE
-sega[6] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
-sega[5] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
-sega[4] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
-sega[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
-sega[2] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
-sega[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
-sega[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
-segb[6] <= Mux13.DB_MAX_OUTPUT_PORT_TYPE
-segb[5] <= Mux12.DB_MAX_OUTPUT_PORT_TYPE
-segb[4] <= Mux11.DB_MAX_OUTPUT_PORT_TYPE
-segb[3] <= Mux10.DB_MAX_OUTPUT_PORT_TYPE
-segb[2] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
-segb[1] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
-segb[0] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
-s_a <= A[0].DB_MAX_OUTPUT_PORT_TYPE
-s_b <= B[0].DB_MAX_OUTPUT_PORT_TYPE
-who[6] <= <GND>
-who[5] <= <VCC>
-who[4] <= PP.DB_MAX_OUTPUT_PORT_TYPE
-who[3] <= <GND>
-who[2] <= who.DB_MAX_OUTPUT_PORT_TYPE
-who[1] <= <VCC>
-who[0] <= <VCC>
+PP << PP.DB_MAX_OUTPUT_PORT_TYPE
+PG << PG.DB_MAX_OUTPUT_PORT_TYPE
+EG << EG.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|intergrationCompNBits|CompNBits:inst|CelluleType:\gen_cells:0:cell_inst
+|CompNBits|CelluleType:\gen_cells:0:cell_inst
 A => F_C.IN0
 A => F_C.IN0
-B => F_D.IN0
+B => F_C.IN0
+B => F_D.IN1
 B => F_C.IN0
 B => F_D.IN1
 x => F_C.IN1
 x => F_C.IN1
 x => F_D.IN0
 y => F_C.IN1
-y => F_D.IN1
+y => F_C.IN1
 y => F_D.IN1
 F_C <= F_C.DB_MAX_OUTPUT_PORT_TYPE
 F_D <= F_D.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|intergrationCompNBits|CompNBits:inst|CelluleType:\gen_cells:1:cell_inst
+|CompNBits|CelluleType:\gen_cells:1:cell_inst
 A => F_C.IN0
 A => F_C.IN0
-B => F_D.IN0
+B => F_C.IN0
+B => F_D.IN1
 B => F_C.IN0
 B => F_D.IN1
 x => F_C.IN1
 x => F_C.IN1
 x => F_D.IN0
 y => F_C.IN1
-y => F_D.IN1
+y => F_C.IN1
 y => F_D.IN1
 F_C <= F_C.DB_MAX_OUTPUT_PORT_TYPE
 F_D <= F_D.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|intergrationCompNBits|CompNBits:inst|CelluleType:\gen_cells:2:cell_inst
+|CompNBits|CelluleType:\gen_cells:2:cell_inst
 A => F_C.IN0
 A => F_C.IN0
-B => F_D.IN0
+B => F_C.IN0
+B => F_D.IN1
 B => F_C.IN0
 B => F_D.IN1
 x => F_C.IN1
 x => F_C.IN1
 x => F_D.IN0
 y => F_C.IN1
-y => F_D.IN1
+y => F_C.IN1
 y => F_D.IN1
 F_C <= F_C.DB_MAX_OUTPUT_PORT_TYPE
 F_D <= F_D.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|intergrationCompNBits|CompNBits:inst|CelluleType:\gen_cells:3:cell_inst
+|CompNBits|CelluleType:\gen_cells:3:cell_inst
 A => F_C.IN0
 A => F_C.IN0
-B => F_D.IN0
+B => F_C.IN0
+B => F_D.IN1
 B => F_C.IN0
 B => F_D.IN1
 x => F_C.IN1
 x => F_C.IN1
 x => F_D.IN0
 y => F_C.IN1
-y => F_D.IN1
+y => F_C.IN1
 y => F_D.IN1
 F_C <= F_C.DB_MAX_OUTPUT_PORT_TYPE
 F_D <= F_D.DB_MAX_OUTPUT_PORT_TYPE

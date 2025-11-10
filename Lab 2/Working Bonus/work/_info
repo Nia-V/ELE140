@@ -1,0 +1,176 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/niave/Downloads/Working Bonus
+Ecelluletype
+Z1 w1762793344
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z4 8CelluleType.vhd
+Z5 FCelluleType.vhd
+l0
+L4 1
+V:S;X7M5Sk:JPoH]7MGJ5l3
+!s100 S4Xi0]zFl3YNY^8HD>?6a3
+Z6 OV;C;2020.1;71
+32
+Z7 !s110 1762795657
+!i10b 1
+Z8 !s108 1762795657.000000
+Z9 !s90 -reportprogress|300|CelluleType.vhd|
+Z10 !s107 CelluleType.vhd|
+!i113 1
+Z11 tExplicit 1 CvgOpt 0
+Acelluletype_arch
+R2
+R3
+DEx4 work 11 celluletype 0 22 :S;X7M5Sk:JPoH]7MGJ5l3
+!i122 0
+l16
+L15 9
+VCH0LgPj=Q7IO=`zL6GaUf0
+!s100 i@<WRXUk;3iIoh;nB]bIR1
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+Ecompnbits
+Z12 w1762795614
+Z13 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R2
+R3
+!i122 1
+R0
+Z14 8CompNBits.vhd
+Z15 FCompNBits.vhd
+l0
+L5 1
+VVZM@=CkfDON55C8FA7?Q<3
+!s100 ;2:@DUCWdDdEmoWP@Ifjf0
+R6
+32
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|CompNBits.vhd|
+Z17 !s107 CompNBits.vhd|
+!i113 1
+R11
+Artl
+R13
+R2
+R3
+Z18 DEx4 work 9 compnbits 0 22 VZM@=CkfDON55C8FA7?Q<3
+!i122 1
+l52
+L19 72
+VohN@LMTalhoP2iCgaY<J]1
+!s100 >STO7ha7DfB>HQWf9Kln51
+R6
+32
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+Etb_comparateur
+Z19 w1760378380
+Z20 DPx4 work 8 txt_util 0 22 OM1Nc<1Xic]h2lmMohkE71
+Z21 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
+R2
+R3
+!i122 3
+R0
+Z22 8TB_Comparateur.vhd
+Z23 FTB_Comparateur.vhd
+l0
+L23 1
+VPL05nnHkb`B:`zj^;eehP3
+!s100 zXGSgnIDT[NU8Pg4DSFX@2
+R6
+32
+Z24 !s110 1762795658
+!i10b 1
+R8
+Z25 !s90 -reportprogress|300|TB_Comparateur.vhd|
+!s107 TB_Comparateur.vhd|
+!i113 1
+R11
+Aarch_testbench
+R13
+R18
+R20
+R21
+R2
+R3
+DEx4 work 14 tb_comparateur 0 22 PL05nnHkb`B:`zj^;eehP3
+!i122 3
+l39
+L27 126
+V<[UKX99Ka7GbYezPoQi[F2
+!s100 A;6kVhEnVBHi<TeTLji1Y3
+R6
+32
+R24
+!i10b 1
+R8
+R25
+Z26 !s107 TB_Comparateur.vhd|
+!i113 1
+R11
+Ptxt_util
+R2
+R3
+!i122 2
+R19
+R0
+Z27 8txt_util.vhd
+Z28 Ftxt_util.vhd
+l0
+L6 1
+VOM1Nc<1Xic]h2lmMohkE71
+!s100 C4m7@Ec3EHGT9<Hd<k8;n0
+R6
+32
+b1
+R7
+!i10b 1
+R8
+Z29 !s90 -reportprogress|300|txt_util.vhd|
+Z30 !s107 txt_util.vhd|
+!i113 1
+R11
+Bbody
+R20
+R2
+R3
+!i122 2
+l0
+L89 1
+Vbh[l@3WWgcgJCkfHBFUj>3
+!s100 oVaSI3P5FT]lhMfcSRJL43
+R6
+32
+R7
+!i10b 1
+R8
+R29
+R30
+!i113 1
+R11
