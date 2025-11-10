@@ -1,0 +1,358 @@
+%=================================================================
+% Modèle de devoir - Version française
+% Auteur : <Votre nom>
+% Description : Modèle LaTeX pour soumissions de devoirs
+%=================================================================
+
+\documentclass[12.0 pt,a4paper]{article}
+
+
+%---------------------------------------------------------------
+% PACKAGES
+%---------------------------------------------------------------
+\usepackage[T1]{fontenc}              % Encodage correct
+\usepackage[utf8]{inputenc}           % Support UTF-8
+\usepackage[french]{babel}            % Langue française
+\usepackage{geometry}                 % Marges
+\geometry{margin=2.0cm}
+\usepackage{ amssymb }
+\usepackage{amsmath,amssymb,amsthm}   % Math
+\usepackage{graphicx}                 % Images
+\usepackage{array}                    % Tableaux avancés
+\usepackage{tikz}                     % K-maps, circuits logiques
+\usetikzlibrary{matrix, positioning}  % Bibliothèques TikZ nécessaires
+\usepackage{caption}                  % Légendes personnalisées
+\usepackage{multirow}                 % Cellules multi-lignes
+\usepackage{xcolor}                   % Couleurs
+\usepackage{fancyhdr}                 % En-têtes / pieds de page
+\usepackage{hyperref}                 % Liens hypertextes
+\usepackage{float}                    % Placement précis
+\usepackage{datetime}                 % Formatage de dates
+\usepackage{ctable}
+\usetikzlibrary{calc}
+\usepackage{tabu}
+\usetikzlibrary{shapes, arrows, positioning}
+\usepackage{changepage} % allows local margin changes
+\usepackage{subfigure}
+%---------------------------------------------------------------
+% INFORMATIONS DU COURS ET DU GROUPE
+%---------------------------------------------------------------
+\newcommand{\codeclasse}{ELE140}                     % Code du cours
+\newcommand{\nomclasse}{Conception des systèmes numériques} % Nom du cours
+\newcommand{\titredevoir}{Laboratoire 2} % Titre du devoir
+\newcommand{\groupe}{-01}
+\newcommand{\enseignant}{Myiah Catwell}
+\newcommand{\datedepot}{\today}
+\newcommand{\Session}{A25}
+\newcommand{\auteurs}{
+	Ourania Voyatzis~(VOYO78260401)\\
+	Jhermain Louis-Jean~(LOUJ67360401)}
+
+%---------------------------------------------------------------
+% MISE EN PAGE
+%---------------------------------------------------------------
+\pagestyle{fancy}
+\fancyhead[L]{\codeclasse\groupe}
+\fancyhead[C]{\titredevoir}
+\fancyhead[R]{\thepage}
+%---------------------------------------------------------------
+% DÉBUT DU DOCUMENT
+%---------------------------------------------------------------
+\begin{document}
+	
+	\begin{titlepage}
+		\vspace*{\fill} 
+		\centering
+		\begin{center}
+		\includegraphics[width=0.20\textwidth]{Logo_ETS_Blanc_SansTypo_FR}
+		\end{center}
+		\textbf{\nomclasse\ (\codeclasse\groupe)}\\[0.5em]
+		\textbf{\titredevoir}\\[0.5em]
+		\textbf{Remis à:} \enseignant \\[1em]
+		\textbf{Remis par :}\\[0.5em]
+		\auteurs\\ [1.0em]
+		\textbf{École de technologie supérieure}\\
+		\textbf{Date :} \datedepot
+		\vspace*{\fill}
+	\end{titlepage}
+	
+	\tableofcontents
+	\newpage
+	%---------------------------------------------------------------
+	% CONTENU
+	%---------------------------------------------------------------
+	\section{Introduction}
+	% In this lab, the task is to create an iterative circuit that can perform a bitwise comparison on  two signed 4 bit integers (A[3..0] and B[3..0]) coded in 2's complement. The scope allows us to use and define 2 carry over signals and to (if nessecary) create a final output function that must have only 3 output signals : PP (A<B), PG (A>B), EG(A = B). 
+	
+	\paragraph{Dans ce laboratoire, la tâche consiste à créer un circuit itératif capable d'effectuer une comparaison bit à bit entre deux entiers signés de 4 bits (A[3..0] et B[3..0]) codés en complément à deux. Le cahier des charges nous autorise à utiliser et à définir deux signaux de retenue et à créer (si nécessaire) une fonction de sortie finale qui ne doit comporter que trois signaux de sortie : PP (A<B), PG (A>B), EG (A = B).}
+	
+	
+	\section{Cellule-type}
+	\subsection{La définition générale de la cellule-type} 
+	% A "cellule type" is a collection combinational boolean functions, or a single function, that is meant to be iterated and instantiated multiple times,and chained together using boundary signals. These chained logic functions allow for more complex multibit operations, that can change the final output, based on the the inputs previous state. These boundary signals act as outputs on one iteration and as inputs on the next, in a sense, its a very rudimentary and inefficent way to implememnt input "memory". An example of this type of logic implemented would be the carry-look ahead adder, whose primary inputs are 2 binary digits of the same index and whose boundary signals are Pi and Gi. These boundary signals represent whether the cell generates, and/or propogates a carry over based on the primary inputs prevoious index and curent index.
+	\paragraph{Une cellule-type est un ensemble de fonctions booléennes combinatoires, ou une seule fonction, destinée à être itérée et instanciée plusieurs fois, puis inter-connectée à l'aide de signaux inter cellule. Ces fonctions logiques chaînées permettent de réaliser des opérations multibits plus complexes, capables de modifier la sortie finale en fonction de l'état précédent des entrées. Ces signaux inter cellules agissent comme des sorties lors d'une itération et comme des entrées lors de l'itération suivante; il s'agit, en quelque sorte, d'une manière très rudimentaire et inefficace d'implémenter une \og mémoire \fg~d'entrée.\\\\
+		Un exemple de mise en \oe uvre de ce type de logique est l'additionneur \og carry-lookahead\fg, dont les entrées principales sont deux chiffres binaires de même indice et dont les signaux de sortie sont Pi et Gi. Ces signaux indiquent si la cellule génère et/ou propage une retenue en fonction des entrées principales des indices précédents et actuels.}
+	\subsection{La définition spécifique de la cellule-type pour comparaison} 
+	% The definition of the generic cell that can iterate over any number of bits and compare 2 numbers coded in 2's complement, so long as they start the sequence at the MSB. This cell definition has certain conditions that must be respected:
+	% - We assume that A and B were always equal before  start up of the machine (A = B  = Z)
+	% - if A and B are equal, and were always equal, then Xout != Yout. 
+	% - if A was 1 and B was 0 on the first bit (sign bit), for this and every subsequent iteration, Xout = Yout = 0 (A<B => 0=Xout=Yout)
+	% - if A was 1 and B was 0 on the any other bit that the first, for this and every subsequent iteration, Xout = Yout = 1 (A>B => 1=Xout=Yout)
+	% - if for the  2 above conditions, B is switched with A and vice versa, then the output would be inverted
+	
+	\paragraph{La définition de la cellule générique capable d'itérer sur un nombre quelconque de bits et de comparer deux nombres codés en complément à deux, à condition que la séquence commence par le bit de poids fort (MSB). Cette définition de cellule est soumise à certaines conditions :\\\\
+		-Nous supposons que A et B étaient égaux juste avant le démarrage de la machine (A=B=Z).\\
+		-Si A et B sont égaux et l'ont toujours été, alors Xout!=Yout.\\
+		-Si A vaut 1 et B vaut 0 sur le premier bit (bit de signe), pour cette itération et toutes les itérations suivantes, Xout = Yout = 0 (A < B => 0 = Xout = Yout).\\
+		-Si A vaut 1 et B vaut 0 sur un autre bit que le premier, pour cette itération et toutes les itérations suivantes, Xout = Yout = 1 (A > B => 1 = Xout = Yout).\\ 
+		- Si, pour les deux conditions ci-dessus, B est interverti avec A et vice versa, alors la sortie est inversée.}
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}[
+			block/.style={draw, thick, minimum width=2.4cm, minimum height=1.4cm, align=center, font=\small},
+			signal/.style={->, thick}
+			]
+			
+			%----- Single Block -----
+			\node[block] (B) {\textbf{Cellule Type}\\
+				$\overline{A}Y_{in}+ BY_{in}+AX_{in}+\overline{B}X_{in} = X_{out}$\\
+				$\overline{A}BY_{in}+ A\overline{B}X_{in}+X_{in}Y_{in} = Y_{out}$\\ };
+			
+			%----- A and B inputs from top -----
+			\draw[signal, <-] ($(B.north) + (-0.5,0)$) -- ++(0,1.0)
+			node[above] {$A_i$};
+			\draw[signal, <-] ($(B.north) + (0.5,0)$) -- ++(0,1.0)
+			node[above] {$B_i$};
+			
+			%----- Carry inputs (Xin, Yin) from left -----
+			\draw[signal, <-] ([yshift=8pt]B.west) -- ++(-1.2,0)
+			node[left]{$X_{in}$};
+			\draw[signal, <-] ([yshift=-8pt]B.west) -- ++(-1.2,0)
+			node[left]{$Y_{in}$};
+			
+			%----- Carry outputs (Xin, Yin) to right -----
+			\draw[signal] ([yshift=8pt]B.east) -- ++(1.2,0)
+			node[right]{$X_{out}$};
+			\draw[signal] ([yshift=-8pt]B.east) -- ++(1.2,0)
+			node[right]{$Y_{out}$};
+			
+		\end{tikzpicture}
+	\end{figure}
+	\newpage
+	\section{Schéma fonctionnel du comparateur}
+	\paragraph{$X_{in}$ et $Y_{in}$ doivent être initialisés respectivement à 0 et 1. En effet, nous devons supposer que $A_{i+1}$ et $B_{i+1}$ seront égaux et à haute impédance au démarrage des machines.\\}
+	
+	\begin{adjustwidth}{-0.85cm}{0cm}   % left margin reduced by 2cm
+		
+		\tikzstyle{block} = [draw, fill=white, rectangle, 
+		minimum height=3em, minimum width=6em]
+		\tikzstyle{sum} = [draw, fill=white, circle, node distance=1cm]
+		\tikzstyle{input} = [coordinate]
+		\tikzstyle{output} = [coordinate]
+		\tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
+		
+		
+		\begin{tikzpicture}[
+			block/.style={draw, thick, minimum width=1.8cm, minimum height=1.0cm, align=center, font=\small},
+			signal/.style={->, thick}
+			]
+			
+			%----- Blocks -----
+			\node[block, minimum height = 1.5cm] (B4) {Cell 4};
+			\node[block, right=1.3cm of B4, minimum height = 1.5cm] (B3) {Cell 3};
+			\node[block, right=1.3cm of B3, minimum height = 1.5cm] (B2) {Cell 2};
+			\node[block, right=1.3cm of B2, minimum height = 1.5cm] (B1) {Cell 1};
+			\node[block, right=1.3cm of B1, minimum height=1.2cm] (B5) {Comparateur\\ \(\overline{X} * \overline{Y}=  PP\)\\\(X * Y = PG\)\\\(X \bigoplus Y = EG\)};
+			
+			%----- A and B inputs from the top (horizontally offset, same height) -----
+			\foreach \i in {4,3,2,1}
+			{
+				% Ai slightly left of center
+				\draw[signal, <-] ($(B\i.north) + (-0.35,0)$) -- ++(0,1.0)
+				node[above] {\small{$A_\i$}};
+				
+				% Bi slightly right of center
+				\draw[signal, <-] ($(B\i.north) + (0.35,0)$) -- ++(0,1.0)
+				node[above] {\small{$B_\i$}};
+			}
+			
+			%----- Carry-over signals -----
+			% Initial Xin / Yin INTO Block 1
+			\draw[signal, <-] ([yshift=6pt]B4.west) -- ++(-1,0) node[left]{\small{$X_{in}=0$}};
+			\draw[signal, <-] ([yshift=-6pt]B4.west) -- ++(-1,0) node[left]{\small{$Y_{in}=1$}};
+			
+			
+			% Carry between blocks
+			\foreach \i/\j in {4/3,3/2,2/1,1/5}
+			{
+				\draw[signal,->] 
+				([yshift=7pt]B\i.east) 
+				-- node[above, midway, font=\small]{$X_{out_{\i}}$} 
+				([yshift=7pt]B\j.west);
+				
+				\draw[signal] 
+				([yshift=-9pt]B\i.east) 
+				-- node[above, midway, font=\small] {$Y_{out_{\i}}$} 
+				([yshift=-9pt]B\j.west);
+			}
+			
+			
+			%----- Separate output signals PP, PG, EG -----
+			\draw[signal] ($(B5.east) + (0, 12pt)$) -- ++(1.2,0) node[right]{\small{PP}};
+			\draw[signal] (B5.east)              -- ++(1.2,0) node[right]{\small{PG}};
+			\draw[signal] ($(B5.east) + (0,-12pt)$) -- ++(1.2,0) node[right]{\small{EG}};
+			
+		\end{tikzpicture}
+		
+		
+	\end{adjustwidth}
+	
+	\section{Table de vérité pour la cellule type :}
+	\begin{figure}[H]
+		\centering
+		
+		\Large\begin{tabu}{|c|c|[1.5pt]cccc|[1.5pt]c|c|}
+			\hline
+			& No. & $X_{in}$ & $Y_{in}$ & $A_i$ & $B_i$  & $X_{out}$ & $Y_{out}$ \\
+			\tabucline[1.5pt]{-}\normalsize\parbox[t]{3.5mm}{\multirow{4}{*}{\rotatebox[origin=c]{90}{Set A<B}}}
+			&0  & 0 & 0 & 0 & 0  & 0 & 0 \\&
+			1  & 0 & 0 & 0 & 1  & 0 & 0 \\&% 1
+			2  & 0 & 0 & 1 & 0  & 0 & 0 \\&% 2
+			3  & 0 & 0 & 1 & 1  & 0 & 0 \\\tabucline[1.5pt]{-}\normalsize\parbox[t]{3.5mm}{\multirow{4}{*}{\rotatebox[origin=c]{90}{~~Bit de signe/init}}}
+			& 4  & 0 & 1 & 0 & 0  & 1 & 0 \\&% -4
+			5  & 0 & 1 & 0 & 1  & 1 & 1 \\&% -3
+			6  & 0 & 1 & 1 & 0  & 0 & 0 \\&% & 0 -27
+			7  & 0 & 1 & 1 & 1  & 1 & 0 \\\tabucline[1.5pt]{-}\normalsize\parbox[t]{3.5mm}{\multirow{4}{*}{\rotatebox[origin=c]{90}{Bits suivants}}}&% -1
+			8  & 1 & 0 & 0 & 0  & 1 & 0 \\&% 1
+			9  & 1 & 0 & 0 & 1  & 0 & 0 \\&% 2
+			10 &  1 & 0 & 1 & 0  & 1 & 1 \\& % 3
+			11 &  1 & 0 & 1 & 1  & 1 & 0 \\\tabucline[1.5pt]{-}\normalsize\parbox[t]{3.5mm}{\multirow{4}{*}{\rotatebox[origin=c]{90}{Set A>B}}} &% 4
+			12 &  1 & 1 & 0 & 0  & 1 & 1 \\ &% -3
+			13 &  1 & 1 & 0 & 1  & 1 & 1 \\ &% -2
+			14 &  1 & 1 & 1 & 0  & 1 & 1 \\ &% -1
+			15 &  1 & 1 & 1 & 1  & 1 & 1 \\\hline % 0
+		\end{tabu}
+	\end{figure}
+	\clearpage
+	\section{Carte de Karnaugh: $X_{out}$ et $Y_{out}$}
+	
+	\begin{figure}[H]
+		\centering
+		
+		% ---------------- KMAP LEFT ----------------
+		\begin{minipage}{0.45\textwidth}
+			\centering
+			\subsection*{$X_{out}$} % use subsection* to avoid numbering
+			\begin{tikzpicture}
+				\matrix (m) [matrix of nodes,
+				nodes={draw, minimum size=0.75cm, anchor=center},
+				column sep=-\pgflinewidth, row sep=-\pgflinewidth] {
+					0 & 0 & 0 & 0 \\
+					1 & 1 & 1 & 0 \\
+					1 & 1 & 1 & 1 \\
+					1 & 0 & 1 & 1 \\
+				};
+				\node[above=4pt of m-1-1] {$\overline{A}\overline{B}$};
+				\node[above=4pt of m-1-2] {$\overline{A}B$};
+				\node[above=4pt of m-1-3] {$AB$};
+				\node[above=4pt of m-1-4] {$A\overline{B}$};
+				
+				\node[left=4pt of m-1-1, rotate=90, anchor=south] {$\overline{X }\overline{Y}$};
+				\node[left=4pt of m-2-1, rotate=90, anchor=south] {$\overline{X}Y$};
+				\node[left=4pt of m-3-1, rotate=90, anchor=south] {$XY$};
+				\node[left=4pt of m-4-1, rotate=90, anchor=south] {$X\overline{B}$};
+			\end{tikzpicture}
+			\caption{$X_{out}=\overline{A}Y+ BY+AX+\overline{B}X$}
+		\end{minipage}
+		\hfill\begin{minipage}{0.45\textwidth}
+			\centering
+			\subsection*{$Y_{out}$}
+			\begin{tikzpicture}
+				\matrix (m) [matrix of nodes,
+				nodes={draw, minimum size=0.75cm, anchor=center},
+				column sep=-\pgflinewidth, row sep=-\pgflinewidth] {
+					0 & 0 & 0 & 0 \\
+					0 & 1 & 0 & 0 \\
+					1 & 1 & 1 & 1 \\
+					0 & 0 & 0 & 1 \\
+				};
+				\node[above=4pt of m-1-1] {$\overline{A}\overline{B}$};
+				\node[above=4pt of m-1-2] {$\overline{A}B$};
+				\node[above=4pt of m-1-3] {$AB$};
+				\node[above=4pt of m-1-4] {$A\overline{B}$};
+				
+				\node[left=4pt of m-1-1, rotate=90, anchor=south] {$\overline{X}\overline{Y}$};
+				\node[left=4pt of m-2-1, rotate=90, anchor=south] {$\overline{X}Y$};
+				\node[left=4pt of m-3-1, rotate=90, anchor=south] {$XY$};
+				\node[left=4pt of m-4-1, rotate=90, anchor=south] {$X\overline{Y}$};
+			\end{tikzpicture}
+			\caption{$Y_{out}=\overline{A}BY+ A\overline{B}X+XY$}
+		\end{minipage}
+		
+	\end{figure}
+	
+	%  I remind you that the neatness of the report will be important: The necessary diagrams and
+	% tables should preferably be created on a computer (no photos of
+	% hand-drawn diagrams/tables). The use of a tablet will be permitted if the rendering is very clean.
+	%  The distribution of tasks within the team is also important (indicate your names in
+	% parentheses next to the sections you worked on).
+	%  A cover page (course/group, title, school, your names/student IDs, my name,
+	% date) and a table of contents.
+	%  All sections and subsections of the provided grading rubric must be present and should include
+	% an introduction.
+	% Validation (20 points)
+	% - Chronogramme de la cellule-type 5 points
+	% - Résultat du Testbench 10 points
+	% - Implémentation matérielle 
+	%   Théorie et Design (40 points)
+	% - Définition d'une cellule-type 3 points
+	% - Définition d'un signal inter cellule 2 points
+	% - Schéma de votre cellule-type et description des signaux 5 points
+	% - Définition d'une table de vérité 2 points
+	% - Table de vérité de votre cellule-type 5 points
+	% - Définition d'une table de Karnaugh et de son fonctionnement 3 points
+	% - Table de Karnaugh de votre cellule-type 5 points
+	% - Comment créer un composant par composition 3 points
+	% de plusieurs cellule-types
+	% - Explication des "boundary signal" 2 points
+	% - Schéma complet de votre comparateur 7 points
+	% - Déduction des liens de connexions de la ieme cellule-type 
+	% Résultat et Discussion (25 points)
+	% - Chronogramme de votre cellule type et discussion 5 points
+	% - Discussion sur les résultats du fichier data.out 3 points
+	% - Discussion sur les chronogrammes de test bench montrant :
+	% o Le fonctionnement d'une comparaison +/+ 3 points
+	% o Le fonctionnement d'une comparaison -/- 3 points
+	% o Le fonctionnement d'une comparaison +/- 3 points
+	% o Le fonctionnement d'une d'une comparaison -/+ 3 points
+	% - Résultat implémentation matérielle 5 points
+	% o For the section on the timing diagram of your typical cell and discussion: Please identify the 4
+	% sections (sign bit, PP, PG, EG) and analyze each of these sections of the timing diagram
+	% explaining whether you obtain the correct results and why according to your implemented logic.
+	% o For the section concerning the i-th typical cell: Explain how you obtained the
+	% equations of your iterative circuit by representing a diagram for a typical cell
+	% with index i and the indices of the inputs and outputs of this typical cell as a function of i.
+	% o For the section concerning the data.out file: Discuss your results but also
+	% indicate how the file was generated and the strategy used.
+	% o For the section discussing the test bench timing diagrams: You must present your
+	% Modelsim timing diagrams and explain the validity of the results for the different
+	% cases of comparisons of positive and negative numbers. o For the hardware results section: Explain how you performed the
+	% tests with the FPGA, all the steps (e.g., pin assignment, block diagram, choice of LEDs/switches and what they represent) and also include a
+	% summary table that demonstrates the operation of the FPGA for the 4 cases (sign bit,
+	% PP, PG, EG), knowing that the switches are your inputs and the LEDs your
+	% outputs. • Each figure and table must include a numbered caption that describes it (at the top for tables
+	% and at the bottom for figures). Remember to indicate at the top of your truth tables which
+	% variables are the inputs and outputs.
+	
+	
+	
+	
+	
+	
+	
+	
+	
+\end{document}
+
+
+
