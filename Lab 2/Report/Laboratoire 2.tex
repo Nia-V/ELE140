@@ -90,7 +90,7 @@
 	\section{Cellule-type}
 	\subsection{La définition générale de la cellule-type} 
 	% A "cellule type" is a collection combinational boolean functions, or a single function, that is meant to be iterated and instantiated multiple times,and chained together using boundary signals. These chained logic functions allow for more complex multibit operations, that can change the final output, based on the the inputs previous state. These boundary signals act as outputs on one iteration and as inputs on the next, in a sense, its a very rudimentary and inefficent way to implememnt input "memory". An example of this type of logic implemented would be the carry-look ahead adder, whose primary inputs are 2 binary digits of the same index and whose boundary signals are Pi and Gi. These boundary signals represent whether the cell generates, and/or propogates a carry over based on the primary inputs prevoious index and curent index.
-	\paragraph{Une cellule-type est un ensemble de fonctions booléennes combinatoires, ou une seule fonction, destinée à être itérée et instanciée plusieurs fois, puis inter-connectée à l'aide de signaux inter cellule (copy-paste). Ces fonctions logiques  identiques et chaînées permettent de réaliser des opérations multibits plus complexes, capables de modifier la sortie finale en fonction de l'état/l'index précédent des entrées. Ces signaux inter cellules agissent comme des sorties lors d'une itération et comme des entrées lors de l'itération suivante; il s'agit, en quelque sorte, d'une manière très rudimentaire et inefficace d'implémenter une \og mémoire \fg~d'entrée primaires.\\\\
+	\paragraph{Une cellule-type est un ensemble de fonctions booléennes combinatoires, ou une seule fonction, destinée à être itérée et instanciée plusieurs fois, puis inter-connectée à l'aide de signaux inter cellule (copy-paste). Ces fonctions logiques identiques et chaînées permettent de réaliser des opérations multibits plus complexes, capables de modifier la sortie finale en fonction de l'état/l'index précédent des entrées. Ces signaux inter cellules agissent comme des sorties lors d'une itération et comme des entrées lors de l'itération suivante; il s'agit, en quelque sorte, d'une manière très rudimentaire et inefficace d'implémenter une \og mémoire \fg~d'entrée primaires.\\\\
 		Un exemple de mise en \oe uvre de ce type de logique est l'additionneur \og carry-lookahead\fg, dont les entrées principales sont deux chiffres binaires de même indice et dont les signaux de sortie sont Pi et Gi. Ces signaux indiquent si la cellule génère et/ou propage une retenue en fonction des entrées principales des indices précédents et actuels.}
 	\subsection{La définition spécifique de la cellule-type pour comparaison} 
 	% The definition of the generic cell that can iterate over any number of bits and compare 2 numbers coded in 2's complement, so long as they start the sequence at the MSB. This cell definition has certain conditions that must be respected:
@@ -137,10 +137,11 @@
 			node[right]{$Y_{out}$};
 			
 		\end{tikzpicture}
+			\caption{\label{fig:figure1} La cellule-type.}
 	\end{figure}
 	\newpage
 	\section{Schéma fonctionnel du comparateur}
-	\paragraph{$X_{in}$ et $Y_{in}$ doivent être initialisés respectivement à 0 et 1. En effet, nous devons supposer que $A_{i+1}$ et $B_{i+1}$ seront égaux et à haute impédance au démarrage des machines.\\}
+	\paragraph{$X_{in}$ et $Y_{in}$ doivent être initialisés respectivement à 0 et 1. En effet, nous devons supposer que $A_{i+1}$ et $B_{i+1}$ seront égaux et à haute impédance au démarrage de la machine.\\}
 	
 	\begin{adjustwidth}{-0.85cm}{0cm}   % left margin reduced by 2cm
 		
@@ -151,21 +152,21 @@
 		\tikzstyle{output} = [coordinate]
 		\tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
 		
-		
+		\begin{figure}[H]
 		\begin{tikzpicture}[
 			block/.style={draw, thick, minimum width=1.8cm, minimum height=1.0cm, align=center, font=\small},
 			signal/.style={->, thick}
 			]
 			
 			%----- Blocks -----
-			\node[block, minimum height = 1.5cm] (B4) {Cell 4};
-			\node[block, right=1.3cm of B4, minimum height = 1.5cm] (B3) {Cell 3};
+			\node[block, minimum height = 1.5cm] (B3) {Cell 3};
 			\node[block, right=1.3cm of B3, minimum height = 1.5cm] (B2) {Cell 2};
 			\node[block, right=1.3cm of B2, minimum height = 1.5cm] (B1) {Cell 1};
-			\node[block, right=1.3cm of B1, minimum height=1.2cm] (B5) {Comparateur\\ \(\overline{X} * \overline{Y}=  PP\)\\\(X * Y = PG\)\\\(X \bigoplus Y = EG\)};
+			\node[block, right=1.3cm of B1, minimum height = 1.5cm] (B0) {Cell 0};
+			\node[block, right=1.3cm of B0, minimum height=1.2cm] (B4) {Comparateur\\ \(\overline{X} * \overline{Y}=  PP\)\\\(X * Y = PG\)\\\(X \bigoplus Y = EG\)};
 			
 			%----- A and B inputs from the top (horizontally offset, same height) -----
-			\foreach \i in {4,3,2,1}
+			\foreach \i in {3,2,1,0}
 			{
 				% Ai slightly left of center
 				\draw[signal, <-] ($(B\i.north) + (-0.35,0)$) -- ++(0,1.0)
@@ -178,12 +179,12 @@
 			
 			%----- Carry-over signals -----
 			% Initial Xin / Yin INTO Block 1
-			\draw[signal, <-] ([yshift=6pt]B4.west) -- ++(-1,0) node[left]{\small{$X_{in}=0$}};
-			\draw[signal, <-] ([yshift=-6pt]B4.west) -- ++(-1,0) node[left]{\small{$Y_{in}=1$}};
+			\draw[signal, <-] ([yshift=6pt]B3.west) -- ++(-1,0) node[left]{\small{$X_{in}=0$}};
+			\draw[signal, <-] ([yshift=-6pt]B3.west) -- ++(-1,0) node[left]{\small{$Y_{in}=1$}};
 			
 			
 			% Carry between blocks
-			\foreach \i/\j in {4/3,3/2,2/1,1/5}
+			\foreach \i/\j in {3/2,2/1,1/0,0/4}
 			{
 				\draw[signal,->] 
 				([yshift=7pt]B\i.east) 
@@ -198,19 +199,21 @@
 			
 			
 			%----- Separate output signals PP, PG, EG -----
-			\draw[signal] ($(B5.east) + (0, 12pt)$) -- ++(1.2,0) node[right]{\small{PP}};
-			\draw[signal] (B5.east)              -- ++(1.2,0) node[right]{\small{PG}};
-			\draw[signal] ($(B5.east) + (0,-12pt)$) -- ++(1.2,0) node[right]{\small{EG}};
+			\draw[signal] ($(B4.east) + (0, 12pt)$) -- ++(1.2,0) node[right]{\small{PP}};
+			\draw[signal] (B4.east)              -- ++(1.2,0) node[right]{\small{PG}};
+			\draw[signal] ($(B4.east) + (0,-12pt)$) -- ++(1.2,0) node[right]{\small{EG}};
 			
 		\end{tikzpicture}
-		
-		
+		\caption{\label{fig:figure2} Schéma fonctionnel du comparateur}
+	\end{figure}
+					
 	\end{adjustwidth}
 	
 	\section{Table de vérité pour la cellule-type}
+	
 	\begin{figure}[H]
 		\centering
-		
+			\caption{\label{fig:figure3} Table de vérité pour la cellule-type: $X_{out}$ et $Y_{out}$}
 		\Large\begin{tabu}{|c|c|[1.5pt]cccc|[1.5pt]c|c|}
 			\hline
 			& No. & $X_{in}$ & $Y_{in}$ & $A_i$ & $B_i$  & $X_{out}$ & $Y_{out}$ \\
