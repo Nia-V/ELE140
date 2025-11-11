@@ -16,7 +16,7 @@
 \contentsline {subsection}{\numberline {4.1}La définition générale d'une table de vérité}{3}{subsection.4.1}%
 \contentsline {subparagraph}{}{3}{section*.9}%
 \contentsline {subsection}{\numberline {4.2}Table de vérité}{4}{subsection.4.2}%
-\contentsline {section}{\numberline {5}Cartes de Karnaugh: $X_{out}$ et $Y_{out}$}{4}{section.5}%
+\contentsline {section}{\numberline {5}Tables de Karnaugh: $X_{out}$ et $Y_{out}$}{4}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Définition}{4}{subsection.5.1}%
 \contentsline {subparagraph}{}{4}{section*.11}%
-\contentsline {subsection}{\numberline {5.2}$X_{out}$ et $Y_{out}$}{5}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.2}K-Maps: $X_{out}$ et $Y_{out}$}{5}{subsection.5.2}%

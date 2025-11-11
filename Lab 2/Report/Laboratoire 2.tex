@@ -248,21 +248,22 @@
 		\end{tabu}
 	\end{figure}
 
-	\section{Cartes de Karnaugh: $X_{out}$ et $Y_{out}$}
+	\section{Tables de Karnaugh: $X_{out}$ et $Y_{out}$}
 	\subsection{Définition}
 	%Karnaugh maps or K-maps are another way of visualizing and encoding logic functions. Instead of incrementally changing the inputs in the standard binary way, for every row and every collumn they increment a grouping of the inputs using gray code. The inputs are split into 2 groups, usually and most easily simplified if the input groupings are equally split. These 2 groupings are split along a vertical and horizontal axis, the incrementented using gray code, creating a square frame that has a sort of coordinate system of input values. Then each cell is filled in with its corresponding output value based on the gray-coded input groupings value at the specific coordinates.
 	
 %	This method, although counter intuitive at first, allows for functions to be easily simplified to their sum of products/product of sums forms  by grouping the all the ones/zeros on the map, respectively. K-maps even allow us to very quickly correct for static hazards in circuitry, before it is ever drawn/conceptualized. 
 	\subparagraph{}Les tableaux de Karnaugh, ou cartes de Karnaugh, constituent une autre méthode de visualisation et de codage des fonctions logiques. Au lieu de modifier progressivement les entrées selon la méthode binaire standard, chaque ligne et chaque colonne incrémentent un groupement d'entrées à l'aide du code de Gray. Les entrées sont divisées en deux groupes, généralement et plus facilement simplifiables si ces groupes sont de taille égale. Ces deux groupes sont répartis le long d'un axe vertical et d'un axe horizontal, l'incrémentation étant effectuée à l'aide du code de Gray, créant ainsi un cadre carré doté d'un système de coordonnées représentant les valeurs d'entrée. Chaque cellule est ensuite remplie avec sa valeur de sortie correspondante, basée sur la valeur des groupements d'entrées codés en code de Gray aux coordonnées spécifiques.\\\\
 	Cette méthode, bien qu'intuitivement déroutante au premier abord, permet de simplifier facilement les fonctions sous leurs formes somme de produits/produit de sommes en regroupant respectivement tous les 1 ou tous les 0 sur le tableau. Les cartes de Karnaugh permettent même de corriger très rapidement les aléas statiques dans les circuits, avant même leur conception ou leur schématisation.
-	\subsection{$X_{out}$ et $Y_{out}$}
+	\subsection{K-Maps: $X_{out}$ et $Y_{out}$}
 	\begin{figure}[H]
 		\centering
 		
 		% ---------------- KMAP LEFT ----------------
 		\begin{minipage}{0.45\textwidth}
 			\centering
-			\subsection*{$X_{out}$} % use subsection* to avoid numbering
+			\subsection*{} % use subsection* to avoid numbering
+			\caption{$X_{out}=\overline{A}Y+ BY+AX+\overline{B}X$}
 			\begin{tikzpicture}
 				\matrix (m) [matrix of nodes,
 				nodes={draw, minimum size=0.75cm, anchor=center},
@@ -282,11 +283,12 @@
 				\node[left=4pt of m-3-1, rotate=90, anchor=south] {$XY$};
 				\node[left=4pt of m-4-1, rotate=90, anchor=south] {$X\overline{B}$};
 			\end{tikzpicture}
-			\caption{$X_{out}=\overline{A}Y+ BY+AX+\overline{B}X$}
+			
 		\end{minipage}
 		\hfill\begin{minipage}{0.45\textwidth}
 			\centering
-			\subsection*{$Y_{out}$}
+			\subsection*{}
+			\caption{$Y_{out}=\overline{A}BY+ A\overline{B}X+XY$}
 			\begin{tikzpicture}
 				\matrix (m) [matrix of nodes,
 				nodes={draw, minimum size=0.75cm, anchor=center},
@@ -306,7 +308,7 @@
 				\node[left=4pt of m-3-1, rotate=90, anchor=south] {$XY$};
 				\node[left=4pt of m-4-1, rotate=90, anchor=south] {$X\overline{Y}$};
 			\end{tikzpicture}
-			\caption{$Y_{out}=\overline{A}BY+ A\overline{B}X+XY$}
+		
 		\end{minipage}
 		
 	\end{figure}
