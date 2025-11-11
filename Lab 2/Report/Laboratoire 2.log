@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.10)  10 NOV 2025 19:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.10)  10 NOV 2025 19:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1156,7 +1156,7 @@ Package hyperref Info: Link coloring OFF on input line 61.
 \@outlinefile=\write4
 \openout4 = `"Laboratoire 2.out"'.
 
-<Logo_ETS_Blanc_SansTypo_FR.png, id=42, 677.53125pt x 677.53125pt>
+<Logo_ETS_Blanc_SansTypo_FR.png, id=50, 677.53125pt x 677.53125pt>
 File: Logo_ETS_Blanc_SansTypo_FR.png Graphic file (type png)
 <use Logo_ETS_Blanc_SansTypo_FR.png>
 Package pdftex.def Info: Logo_ETS_Blanc_SansTypo_FR.png  used on input line 67.
@@ -1225,22 +1225,52 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 243.
 
-[3] [4] (Laboratoire 2.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 250--250
+
+ []
+
+[3]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 250.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 250.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 250.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 250.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 250.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 250.
+
+[4] (Laboratoire 2.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
  ***********
 Package rerunfilecheck Info: File `"Laboratoire 2".out' has not changed.
-(rerunfilecheck)             Checksum: 60AD61A28D1779756B61C7A5E31A1E46;2009.
+(rerunfilecheck)             Checksum: 625C896EC5D0D04095DD5614E8DB6C38;2244.
  ) 
 Here is how much of TeX's memory you used:
- 29944 strings out of 467871
- 577682 string characters out of 5418375
- 1043534 words of memory out of 5000000
- 58283 multiletter control sequences out of 15000+600000
+ 29949 strings out of 467871
+ 577753 string characters out of 5418375
+ 1030534 words of memory out of 5000000
+ 58285 multiletter control sequences out of 15000+600000
  643991 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,18n,104p,1230b,1075s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,18n,104p,1410b,1075s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\niave\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm
 1440.pk> <C:\Users\niave\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
 0\ecrm0900.pk> <C:\Users\niave\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
@@ -1264,9 +1294,9 @@ Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/niave/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/niave/
 AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users
 /niave/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on "Laboratoire 2.pdf" (5 pages, 242029 bytes).
+Output written on "Laboratoire 2.pdf" (5 pages, 245987 bytes).
 PDF statistics:
- 437 PDF objects out of 1000 (max. 8388607)
- 26 named destinations out of 1000 (max. 500000)
- 90 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 452 PDF objects out of 1000 (max. 8388607)
+ 29 named destinations out of 1000 (max. 500000)
+ 106 words of extra memory for PDF output out of 10000 (max. 10000000)
 
