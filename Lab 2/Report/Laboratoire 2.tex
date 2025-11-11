@@ -84,14 +84,14 @@
 	\section{Introduction}
 	% In this lab, the task is to create an iterative circuit that can perform a bitwise comparison on  two signed 4 bit integers (A[3..0] and B[3..0]) coded in 2's complement. The scope allows us to use and define 2 carry over signals and to (if nessecary) create a final output function that must have only 3 output signals : PP (A<B), PG (A>B), EG(A = B). 
 	
-	\subparagraph{Dans le cadre de cette laboratoire, la tâche consiste à créer un circuit itératif capable d'effectuer une comparaison bit à bit entre deux entiers signés de 4 bits (A[3..0] et B[3..0]) codés en complément à deux. Le cahier des charges nous autorise à utiliser et à définir deux signaux de retenue et à créer (si nécessaire) une fonction de sortie finale qui ne doit comporter que trois signaux de sortie : PP (A<B), PG (A>B), EG (A=B).}
+	\subparagraph{}Dans le cadre de cette laboratoire, la tâche consiste à créer un circuit itératif capable d'effectuer une comparaison bit à bit entre deux entiers signés de 4 bits (A[3..0] et B[3..0]) codés en complément à deux. Le cahier des charges nous autorise à utiliser et à définir deux signaux de retenue et à créer (si nécessaire) une fonction de sortie finale qui ne doit comporter que trois signaux de sortie : PP (A<B), PG (A>B), EG (A=B).
 	
 	
 	\section{Cellule-type}
 	\subsection{La définition générale d'une cellule-type} 
 	% A "cellule type" is a collection combinational boolean functions, or a single function, that is meant to be iterated and instantiated multiple times,and chained together using boundary signals. These chained logic functions allow for more complex multibit operations, that can change the final output, based on the the inputs previous state. These boundary signals act as outputs on one iteration and as inputs on the next, in a sense, its a very rudimentary and inefficent way to implememnt input "memory". An example of this type of logic implemented would be the carry-look ahead adder, whose primary inputs are 2 binary digits of the same index and whose boundary signals are Pi and Gi. These boundary signals represent whether the cell generates, and/or propogates a carry over based on the primary inputs prevoious index and curent index.
-	\subparagraph{Une cellule-type est un ensemble de fonctions booléennes combinatoires, ou une seule fonction, destinée à être itérée et instanciée plusieurs fois, puis inter-connectée à l'aide de signaux inter cellule (copy-paste). Ces fonctions logiques identiques et chaînées permettent de réaliser des opérations multibits plus complexes, capables de modifier la sortie finale en fonction de l'état/l'index précédent des entrées. Ces signaux inter cellules agissent comme des sorties lors d'une itération et comme des entrées lors de l'itération suivante; il s'agit, en quelque sorte, d'une manière très rudimentaire et inefficace d'implémenter une \og mémoire \fg~d'entrée primaires.\\\\
-		Un exemple de mise en \oe uvre de ce type de logique est l'additionneur \og carry-lookahead\fg, dont les entrées principales sont deux chiffres binaires de même indice et dont les signaux de sortie sont Pi et Gi. Ces signaux indiquent si la cellule génère et/ou propage une retenue en fonction des entrées principales des indices précédents et actuels.}
+	\subparagraph{}Une cellule-type est un ensemble de fonctions booléennes combinatoires, ou une seule fonction, destinée à être itérée et instanciée plusieurs fois, puis inter-connectée à l'aide de signaux inter cellule (copy-paste). Ces fonctions logiques identiques et chaînées permettent de réaliser des opérations multibits plus complexes, capables de modifier la sortie finale en fonction de l'état/l'index précédent des entrées. Ces signaux inter cellules agissent comme des sorties lors d'une itération et comme des entrées lors de l'itération suivante; il s'agit, en quelque sorte, d'une manière très rudimentaire et inefficace d'implémenter une \og mémoire \fg~d'entrée primaires.\\\\
+	Un exemple de mise en \oe uvre de ce type de logique est l'additionneur \og carry-lookahead\fg, dont les entrées principales sont deux chiffres binaires de même indice et dont les signaux de sortie sont Pi et Gi. Ces signaux indiquent si la cellule génère et/ou propage une retenue en fonction des entrées principales des indices précédents et actuels.
 	\subsection{La définition spécifique de la cellule-type pour comparaison} 
 	% The definition of the generic cell that can iterate over any number of bits and compare 2 numbers coded in 2's complement, so long as they start the sequence at the MSB. This cell definition has certain conditions that must be respected:
 	% - We assume that A and B were always equal before  start up of the machine (A = B  = Z)
@@ -100,12 +100,12 @@
 	% - if A was 1 and B was 0 on the any other bit that the first, for this and every subsequent iteration, Xout = Yout = 1 (A>B => 1=Xout=Yout)
 	% - if for the  2 above conditions, B is switched with A and vice versa, then the output would be inverted
 	
-	\subparagraph{La définition de la cellule générique capable d'itérer sur un nombre quelconque de bits et de comparer deux nombres codés en complément à deux, à condition que la séquence commence par le bit de poids fort (MSB). Cette définition de cellule est soumise à certaines conditions :\\\\
-		-Nous supposons que A et B étaient égaux juste avant le démarrage de la machine (A=B=Z).\\
-		-Si A et B sont égaux et l'ont toujours été, alors Xout!=Yout.\\
-		-Si A vaut 1 et B vaut 0 sur le premier bit (bit de signe), pour cette itération et toutes les itérations suivantes, Xout = Yout = 0 (A < B => 0 = Xout = Yout).\\
-		-Si A vaut 1 et B vaut 0 sur un autre bit que le premier, pour cette itération et toutes les itérations suivantes, Xout = Yout = 1 (A > B => 1 = Xout = Yout).\\ 
-		- Si, pour les deux conditions ci-dessus, B est interverti avec A et vice versa, alors la sortie est inversée.}
+	\subparagraph{}La définition de la cellule générique capable d'itérer sur un nombre quelconque de bits et de comparer deux nombres codés en complément à deux, à condition que la séquence commence par le bit de poids fort (MSB). Cette définition de cellule est soumise à certaines conditions :\\\\
+	-Nous supposons que A et B étaient égaux juste avant le démarrage de la machine (A=B=Z).\\
+	-Si A et B sont égaux et l'ont toujours été, alors Xout!=Yout.\\
+	-Si A vaut 1 et B vaut 0 sur le premier bit (bit de signe), pour cette itération et toutes les itérations suivantes, Xout = Yout = 0 (A < B => 0 = Xout = Yout).\\
+	-Si A vaut 1 et B vaut 0 sur un autre bit que le premier, pour cette itération et toutes les itérations suivantes, Xout = Yout = 1 (A > B => 1 = Xout = Yout).\\ 
+	- Si, pour les deux conditions ci-dessus, B est interverti avec A et vice versa, alors la sortie est inversée.\\
 	\begin{figure}[H]
 		\centering
 		\begin{tikzpicture}[
@@ -141,8 +141,13 @@
 	\end{figure}
 	\newpage
 	\section{Schéma fonctionnel du comparateur}
-	\subparagraph{$X_{in}$ et $Y_{in}$ doivent être initialisés respectivement à 0 et 1. En effet, nous devons supposer que $A_{i+1}$ et $B_{i+1}$ seront égaux et à haute impédance au démarrage de la machine.\\}
+	\subsection{La définition des signaux inter cellules}
+	\subparagraph{}Les signaux intercellulaires sont les signaux qui circulent entre les cellules répétées ; ils transportent des informations codées sur les entrées primaires des cellules précédentes. La signification de chaque signal varie en fonction de l'architecture de la cellule de base répétée.\\\\
+	\subsection{La définition des signaux inter cellules $X_{out}$ et $Y_{out}$}
+	\subparagraph{}$X_{in}$ et $Y_{in}$ doivent être initialisés respectivement à 0 et 1. En effet, nous devons supposer que $A_{N+1}$ et $B_{N+1}$ seront égaux et à haute impédance au démarrage de la machine.(INIT/SIGN BIT)\\\\Les signaux intercellulaires du circuit conçu représentent cumulativement si A est supérieur, inférieur ou égal à B. Comme spécifié dans la table de vérité ci-dessus, lorsque les signaux intercellulaires $X_{out}$ et $Y_{out}$ sont égaux à 11, cela signifie A > B. Inversement, lorsqu'ils sont égaux à 00, A < B. Lorsque  $X_{out}$ et  $X_{out}$ sont différents ( $X_{out}$ != $Y_{out}$), cela signifie que jusqu'à présent, tous les bits précédents de A et B ont été égaux, en commençant par MSB. Si cet état est maintenu jusqu'au dernier bit (LSB), alors les deux nombres A et B sont exactement identiques.
 	
+	\subsection{Comparateur}
+	\begin{figure}[H]
 	\begin{adjustwidth}{-0.85cm}{0cm}   % left margin reduced by 2cm
 		
 		\tikzstyle{block} = [draw, fill=white, rectangle, 
@@ -152,9 +157,10 @@
 		\tikzstyle{output} = [coordinate]
 		\tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
 		
-		\begin{figure}[H]
+
+			\centering
 		\begin{tikzpicture}[
-			block/.style={draw, thick, minimum width=1.8cm, minimum height=1.0cm, align=center, font=\small},
+			block/.style={draw, thick, minimum width=1.8cm, minimum height=1.0cm, align=left, font=\small},
 			signal/.style={->, thick}
 			]
 			
@@ -205,14 +211,15 @@
 			
 		\end{tikzpicture}
 		\caption{\label{fig:figure2} Schéma fonctionnel du comparateur}
-	\end{figure}
+
 					
 	\end{adjustwidth}
+		\end{figure}
 	
 	\section{Table de vérité pour la cellule-type}
 	\subsection{La définition générale d'une table de vérité}
 	% A truth table is a method of encoding and visualizing logic functions. Incrementally changing the inputs and showing the resulting output(s)éééé
-	\subparagraph{Une table de vérité est une méthode permettant de coder et de visualiser des fonctions logiques. Elle consiste à modifier progressivement les entrées et à afficher la ou les sorties correspondantes.}
+	\subparagraph{}Une table de vérité est une méthode permettant de coder et de visualiser des fonctions logiques. Elle consiste à modifier progressivement les entrées et à afficher la ou les sorties correspondantes.\\
 	\subsection{Table de vérité}
 	\begin{figure}[H]
 		\centering
@@ -245,8 +252,8 @@
 	%Karnaugh maps or K-maps are another way of visualizing and encoding logic functions. Instead of incrementally changing the inputs in the standard binary way, for every row and every collumn they increment a grouping of the inputs using gray code. The inputs are split into 2 groups, usually and most easily simplified if the input groupings are equally split. These 2 groupings are split along a vertical and horizontal axis, the incrementented using gray code, creating a square frame that has a sort of coordinate system of input values. Then each cell is filled in with its corresponding output value based on the gray-coded input groupings value at the specific coordinates.
 	
 %	This method, although counter intuitive at first, allows for functions to be easily simplified to their sum of products/product of sums forms  by grouping the all the ones/zeros on the map, respectively. K-maps even allow us to very quickly correct for static hazards in circuitry, before it is ever drawn/conceptualized. 
-	\subparagraph{Les tableaux de Karnaugh, ou cartes de Karnaugh, constituent une autre méthode de visualisation et de codage des fonctions logiques. Au lieu de modifier progressivement les entrées selon la méthode binaire standard, chaque ligne et chaque colonne incrémentent un groupement d'entrées à l'aide du code de Gray. Les entrées sont divisées en deux groupes, généralement et plus facilement simplifiables si ces groupes sont de taille égale. Ces deux groupes sont répartis le long d'un axe vertical et d'un axe horizontal, l'incrémentation étant effectuée à l'aide du code de Gray, créant ainsi un cadre carré doté d'un système de coordonnées représentant les valeurs d'entrée. Chaque cellule est ensuite remplie avec sa valeur de sortie correspondante, basée sur la valeur des groupements d'entrées codés en code de Gray aux coordonnées spécifiques.\\\\
-	Cette méthode, bien qu'intuitivement déroutante au premier abord, permet de simplifier facilement les fonctions sous leurs formes somme de produits/produit de sommes en regroupant respectivement tous les 1 ou tous les 0 sur le tableau. Les cartes de Karnaugh permettent même de corriger très rapidement les aléas statiques dans les circuits, avant même leur conception ou leur schématisation.}
+	\subparagraph{}Les tableaux de Karnaugh, ou cartes de Karnaugh, constituent une autre méthode de visualisation et de codage des fonctions logiques. Au lieu de modifier progressivement les entrées selon la méthode binaire standard, chaque ligne et chaque colonne incrémentent un groupement d'entrées à l'aide du code de Gray. Les entrées sont divisées en deux groupes, généralement et plus facilement simplifiables si ces groupes sont de taille égale. Ces deux groupes sont répartis le long d'un axe vertical et d'un axe horizontal, l'incrémentation étant effectuée à l'aide du code de Gray, créant ainsi un cadre carré doté d'un système de coordonnées représentant les valeurs d'entrée. Chaque cellule est ensuite remplie avec sa valeur de sortie correspondante, basée sur la valeur des groupements d'entrées codés en code de Gray aux coordonnées spécifiques.\\\\
+	Cette méthode, bien qu'intuitivement déroutante au premier abord, permet de simplifier facilement les fonctions sous leurs formes somme de produits/produit de sommes en regroupant respectivement tous les 1 ou tous les 0 sur le tableau. Les cartes de Karnaugh permettent même de corriger très rapidement les aléas statiques dans les circuits, avant même leur conception ou leur schématisation.
 	\subsection{$X_{out}$ et $Y_{out}$}
 	\begin{figure}[H]
 		\centering

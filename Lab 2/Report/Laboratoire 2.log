@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.10)  10 NOV 2025 19:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.10)  10 NOV 2025 20:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1156,7 +1156,7 @@ Package hyperref Info: Link coloring OFF on input line 61.
 \@outlinefile=\write4
 \openout4 = `"Laboratoire 2.out"'.
 
-<Logo_ETS_Blanc_SansTypo_FR.png, id=50, 677.53125pt x 677.53125pt>
+<Logo_ETS_Blanc_SansTypo_FR.png, id=62, 677.53125pt x 677.53125pt>
 File: Logo_ETS_Blanc_SansTypo_FR.png Graphic file (type png)
 <use Logo_ETS_Blanc_SansTypo_FR.png>
 Package pdftex.def Info: Logo_ETS_Blanc_SansTypo_FR.png  used on input line 67.
@@ -1187,46 +1187,66 @@ been already used, duplicate ignored
                    \relax 
 l.80 	\newpage
                [1]
-Underfull \hbox (badness 10000) in paragraph at lines 95--95
+Underfull \hbox (badness 10000) in paragraph at lines 93--95
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 142--142
+Underfull \hbox (badness 10000) in paragraph at lines 103--141
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--141
 
  []
 
 [2]
-Overfull \hbox (58.47244pt too wide) in paragraph at lines 206--207
-[][] 
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
+
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 243.
+(hyperref)                removing `math shift' on input line 146.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 243.
+(hyperref)                removing `subscript' on input line 146.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 243.
+(hyperref)                removing `math shift' on input line 146.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 243.
+(hyperref)                removing `math shift' on input line 146.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 243.
+(hyperref)                removing `subscript' on input line 146.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 243.
+(hyperref)                removing `math shift' on input line 146.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 250--250
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
+
+ []
+
+
+Overfull \hbox (34.28743pt too wide) in paragraph at lines 212--213
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 222--223
 
  []
 
@@ -1255,22 +1275,51 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 250.
 
-[4] (Laboratoire 2.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 255--257
+
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 257.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 257.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 257.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 257.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 257.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 257.
+
+[4] [5] (Laboratoire 2.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
  ***********
 Package rerunfilecheck Info: File `"Laboratoire 2".out' has not changed.
-(rerunfilecheck)             Checksum: 625C896EC5D0D04095DD5614E8DB6C38;2244.
+(rerunfilecheck)             Checksum: 4BEE8FBBB06B27B74B80053D6E18C3C2;2983.
  ) 
 Here is how much of TeX's memory you used:
- 29949 strings out of 467871
- 577753 string characters out of 5418375
- 1030534 words of memory out of 5000000
- 58285 multiletter control sequences out of 15000+600000
+ 29957 strings out of 467871
+ 577860 string characters out of 5418375
+ 1033535 words of memory out of 5000000
+ 58288 multiletter control sequences out of 15000+600000
  643991 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,18n,104p,1410b,1075s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,18n,104p,1046b,1075s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\niave\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm
 1440.pk> <C:\Users\niave\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
 0\ecrm0900.pk> <C:\Users\niave\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
@@ -1294,9 +1343,9 @@ Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/niave/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/niave/
 AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users
 /niave/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on "Laboratoire 2.pdf" (5 pages, 245987 bytes).
+Output written on "Laboratoire 2.pdf" (6 pages, 249139 bytes).
 PDF statistics:
- 452 PDF objects out of 1000 (max. 8388607)
- 29 named destinations out of 1000 (max. 500000)
- 106 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 469 PDF objects out of 1000 (max. 8388607)
+ 34 named destinations out of 1000 (max. 500000)
+ 130 words of extra memory for PDF output out of 10000 (max. 10000000)
 
