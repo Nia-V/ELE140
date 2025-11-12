@@ -1,0 +1,49 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_textio.all;
+entity TB_P1 is  -- L'entite du testbench est toujours vide
+end TB_P1;
+
+
+architecture ARCH_TB_P1 of TB_P1 is
+  -- Declarations des constantes
+
+  constant CLOCK_PERIOD : time    := 20 ns;  --Periode de l'horloge
+
+  -- COMMENTAIRE 1 : 
+  signal ZERO : std_logic:=0;
+  signal BUTTON : std_logic;
+  signal GREEN : std_logic;
+  signal RED : std_logic;
+  signal BREAK : std_logic;
+  -- COMMENTAIRE 2 :
+begin
+  -- Instanciation de l'UUT (Unit Under Test)
+
+  main : process
+  begin
+   BUTTON <= '1';
+  	wait for 20 ns;
+	BUTTON <= '0';
+	wait;
+	
+end process;
+begin
+MUX : entity work.MUX
+
+    port map (
+      A  => ZERO,
+      B  => BUTTON,
+		Sel => BUTTON,
+		Sout => RED, BREAK,
+		BUTTON => GREEN);
+
+end architecture TB_P1;
+
+
+		
+		
+		
+		
+		
+		

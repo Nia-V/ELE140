@@ -16,7 +16,8 @@ architecture add_arch of Adder is
 begin
 process (A,B,Cin)
 begin
-	S <= A xor B xor Cin ;
-   Cout <= (((A xor B) and Cin) or (A and B));
+Cout <= (((A xor B) and Cin) or (A and B));
+	S <= ((A xor B)xor Cin) ;
+   
 end process;
 end add_arch;
