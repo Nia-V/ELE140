@@ -8,6 +8,17 @@ end TB_P1;
 
 
 architecture testbench of TB_P1 is
+component P1
+    port(
+ 		A, B       : in  std_logic_vector(11 downto 11);
+		S       : out  std_logic_vector(11 downto 11)
+    );
+	 
+
+end component;
+
+
+
 
 	signal A : std_logic_vector(11 downto 0);
 	signal B : std_logic_vector(11 downto 0);
@@ -26,7 +37,7 @@ begin
 
 	end process;
 
-DUT : entity.work.P1
+DUT : P1
 
 	port map (
 

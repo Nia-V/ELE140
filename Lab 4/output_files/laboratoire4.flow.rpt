@@ -1,5 +1,5 @@
 Flow report for laboratoire4
-Wed Nov 12 18:26:05 2025
+Wed Nov 12 18:34:54 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Flow Failed - Wed Nov 12 18:26:05 2025      ;
+; Flow Status                        ; Flow Failed - Wed Nov 12 18:34:54 2025      ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; laboratoire4                                ;
 ; Top-level Entity Name              ; TB_P1                                       ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/12/2025 18:25:58 ;
+; Start date & time ; 11/12/2025 18:34:47 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; laboratoire4        ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 20271594681365.176298995840544         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 20271594681365.176299048634664         ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; TB_P1       ; Top        ;
@@ -95,8 +95,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4780 MB             ; 00:00:05                           ;
-; Total                ; 00:00:08     ; --                      ; --                  ; 00:00:05                           ;
+; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4780 MB             ; 00:00:06                           ;
+; Total                ; 00:00:08     ; --                      ; --                  ; 00:00:06                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

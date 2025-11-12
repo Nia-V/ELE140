@@ -1,5 +1,5 @@
 Analysis & Synthesis report for laboratoire4
-Wed Nov 12 18:26:05 2025
+Wed Nov 12 18:34:54 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Wed Nov 12 18:26:05 2025           ;
+; Analysis & Synthesis Status        ; Failed - Wed Nov 12 18:34:54 2025           ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; laboratoire4                                ;
 ; Top-level Entity Name              ; TB_P1                                       ;
@@ -163,14 +163,13 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Nov 12 18:25:57 2025
+    Info: Processing started: Wed Nov 12 18:34:46 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off laboratoire4 -c laboratoire4
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
-Error (10500): VHDL syntax error at TB_P1.vhd(29) near text ".";  expecting an identifier, or a string literal File: C:/Users/niave/OneDrive/Desktop/F25/ELE140/Lab 4/TB_P1.vhd Line: 29
-Error (10500): VHDL syntax error at TB_P1.vhd(31) near text "port";  expecting "(", or "'", or "." File: C:/Users/niave/OneDrive/Desktop/F25/ELE140/Lab 4/TB_P1.vhd Line: 31
-Error (10500): VHDL syntax error at TB_P1.vhd(36) near text ";";  expecting "<=" File: C:/Users/niave/OneDrive/Desktop/F25/ELE140/Lab 4/TB_P1.vhd Line: 36
-Info (12021): Found 0 design units, including 0 entities, in source file tb_p1.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file tb_p1.vhd
+    Info (12022): Found design unit 1: TB_P1-testbench File: C:/Users/niave/OneDrive/Desktop/F25/ELE140/Lab 4/TB_P1.vhd Line: 10
+    Info (12023): Found entity 1: TB_P1 File: C:/Users/niave/OneDrive/Desktop/F25/ELE140/Lab 4/TB_P1.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file compnbits.vhd
     Info (12022): Found design unit 1: CompNBits-rtl File: C:/Users/niave/OneDrive/Desktop/F25/ELE140/Lab 4/CompNBits.vhd Line: 19
     Info (12023): Found entity 1: CompNBits File: C:/Users/niave/OneDrive/Desktop/F25/ELE140/Lab 4/CompNBits.vhd Line: 5
@@ -183,10 +182,11 @@ Info (12021): Found 2 design units, including 1 entities, in source file adder.v
 Info (12021): Found 2 design units, including 1 entities, in source file p1.vhd
     Info (12022): Found design unit 1: P1-P1_ARCH File: C:/Users/niave/OneDrive/Desktop/F25/ELE140/Lab 4/P1.vhd Line: 13
     Info (12023): Found entity 1: P1 File: C:/Users/niave/OneDrive/Desktop/F25/ELE140/Lab 4/P1.vhd Line: 4
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 1 warning
+Error (10476): VHDL error at TB_P1.vhd(33): type of identifier "ns" does not agree with its usage as "boolean" type File: C:/Users/niave/OneDrive/Desktop/F25/ELE140/Lab 4/TB_P1.vhd Line: 33
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
     Error: Peak virtual memory: 4780 megabytes
-    Error: Processing ended: Wed Nov 12 18:26:05 2025
+    Error: Processing ended: Wed Nov 12 18:34:54 2025
     Error: Elapsed time: 00:00:08
-    Error: Total CPU time (on all processors): 00:00:05
+    Error: Total CPU time (on all processors): 00:00:06
 
 
