@@ -116,8 +116,8 @@
 			
 			%----- Single Block -----
 			\node[block] (B) {\textbf{Cellule Type}\\
-				$\overline{A}Y_{in}+ BY_{in}+AX_{in}+\overline{B}X_{in} = X_{out}$\\
-				$\overline{A}BY_{in}+ A\overline{B}X_{in}+X_{in}Y_{in} = Y_{out}$\\ };
+				$\overline{A_{i}}Y_{in_i}+ B_{i}Y_{in_i}+A_{i}X_{in_i}+\overline{B_{i}}X_{in_i} = X_{out_i}$\\
+				$\overline{A_i}B_iY_{in_i}+ A_i\overline{B_{i}}X_{in_i}+X_{in_i}Y_{in_i} = Y_{out_i}$\\ };
 			
 			%----- A and B inputs from top -----
 			\draw[signal, <-] ($(B.north) + (-0.5,0)$) -- ++(0,1.0)
@@ -127,18 +127,18 @@
 			
 			%----- Carry inputs (Xin, Yin) from left -----
 			\draw[signal, <-] ([yshift=8pt]B.west) -- ++(-1.2,0)
-			node[left]{$X_{in}$};
+			node[left]{$X_{in_i}$};
 			\draw[signal, <-] ([yshift=-8pt]B.west) -- ++(-1.2,0)
-			node[left]{$Y_{in}$};
+			node[left]{$Y_{in_i}$};
 			
 			%----- Carry outputs (Xin, Yin) to right -----
 			\draw[signal] ([yshift=8pt]B.east) -- ++(1.2,0)
-			node[right]{$X_{out}$};
+			node[right]{$X_{out_i}$};
 			\draw[signal] ([yshift=-8pt]B.east) -- ++(1.2,0)
-			node[right]{$Y_{out}$};
+			node[right]{$Y_{out_i}$};
 			
 		\end{tikzpicture}
-			\caption{\label{fig:figure1} La cellule-type.}
+			\caption{\label{fig:figure1} La i-ième cellule-type}
 	\end{figure}
 	\newpage
 	\section{Schéma fonctionnel du comparateur}

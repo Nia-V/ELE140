@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.10)  10 NOV 2025 22:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.10)  12 NOV 2025 10:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1315,7 +1315,7 @@ Package rerunfilecheck Info: File `"Laboratoire 2".out' has not changed.
 Here is how much of TeX's memory you used:
  29954 strings out of 467871
  577829 string characters out of 5418375
- 1033527 words of memory out of 5000000
+ 1033535 words of memory out of 5000000
  58285 multiletter control sequences out of 15000+600000
  643991 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1333,19 +1333,21 @@ eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk><C:/Users/niave/AppData/Local
 AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Use
 rs/niave/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pf
 b><C:/Users/niave/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmmi6.pfb><C:/Users/niave/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmmi7.pfb><C:/Users/niave/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmmi8.pfb><C:/Users/niave/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmmi9.pfb><C:/Users/niave/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/niave/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/niave/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/niave/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/niave/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users
-/niave/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on "Laboratoire 2.pdf" (6 pages, 250148 bytes).
+cmmi5.pfb><C:/Users/niave/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmmi6.pfb><C:/Users/niave/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmmi7.pfb><C:/Users/niave/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmmi8.pfb><C:/Users/niave/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/niave/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/niave/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/niave/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/niave
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/User
+s/niave/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><
+C:/Users/niave/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cms
+y9.pfb>
+Output written on "Laboratoire 2.pdf" (6 pages, 258796 bytes).
 PDF statistics:
- 472 PDF objects out of 1000 (max. 8388607)
+ 477 PDF objects out of 1000 (max. 8388607)
  34 named destinations out of 1000 (max. 500000)
  130 words of extra memory for PDF output out of 10000 (max. 10000000)
 
