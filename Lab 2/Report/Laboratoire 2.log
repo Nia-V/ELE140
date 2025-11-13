@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.10)  12 NOV 2025 10:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.10)  12 NOV 2025 19:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1156,7 +1156,7 @@ Package hyperref Info: Link coloring OFF on input line 62.
 \@outlinefile=\write4
 \openout4 = `"Laboratoire 2.out"'.
 
-<Logo_ETS_Blanc_SansTypo_FR.png, id=62, 677.53125pt x 677.53125pt>
+<Logo_ETS_Blanc_SansTypo_FR.png, id=86, 677.53125pt x 677.53125pt>
 File: Logo_ETS_Blanc_SansTypo_FR.png Graphic file (type png)
 <use Logo_ETS_Blanc_SansTypo_FR.png>
 Package pdftex.def Info: Logo_ETS_Blanc_SansTypo_FR.png  used on input line 68.
@@ -1304,19 +1304,84 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 258.
 
-[4] [5] (Laboratoire 2.aux)
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 370--371
+
+ []
+
+<2025-10-29 14 22 27.png, id=161, 1927.2pt x 1084.05pt>
+File: 2025-10-29 14 22 27.png Graphic file (type png)
+<use 2025-10-29 14 22 27.png>
+Package pdftex.def Info: 2025-10-29 14 22 27.png  used on input line 380.
+(pdftex.def)             Requested size: 338.58632pt x 190.4394pt.
+[5 <./2025-10-29 14 22 27.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 387--389
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 387--389
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 387--389
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 390--391
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 390--391
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 391--392
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 391--392
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 392--393
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 392--393
+
+ []
+
+<2025-10-29 15 32 39.png, id=173, 1918.16624pt x 1044.90375pt>
+File: 2025-10-29 15 32 39.png Graphic file (type png)
+<use 2025-10-29 15 32 39.png>
+Package pdftex.def Info: 2025-10-29 15 32 39.png  used on input line 398.
+(pdftex.def)             Requested size: 338.58632pt x 184.43935pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 394--401
+
+ []
+
+[6 <./2025-10-29 15 32 39.png (PNG copy)>] [7] (Laboratoire 2.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
  ***********
 Package rerunfilecheck Info: File `"Laboratoire 2".out' has not changed.
-(rerunfilecheck)             Checksum: 87B59BFCDA3C1CC2DE5CADE23B059C1D;3026.
+(rerunfilecheck)             Checksum: 3261729259AFE5BCC66B8A937C438809;4068.
  ) 
 Here is how much of TeX's memory you used:
- 29954 strings out of 467871
- 577829 string characters out of 5418375
- 1033535 words of memory out of 5000000
- 58285 multiletter control sequences out of 15000+600000
+ 30010 strings out of 467871
+ 578995 string characters out of 5418375
+ 1033599 words of memory out of 5000000
+ 58321 multiletter control sequences out of 15000+600000
  643991 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,18n,104p,1046b,1091s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1345,9 +1410,9 @@ a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/niave
 s/niave/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><
 C:/Users/niave/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cms
 y9.pfb>
-Output written on "Laboratoire 2.pdf" (6 pages, 258796 bytes).
+Output written on "Laboratoire 2.pdf" (8 pages, 552473 bytes).
 PDF statistics:
- 477 PDF objects out of 1000 (max. 8388607)
- 34 named destinations out of 1000 (max. 500000)
- 130 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 557 PDF objects out of 1000 (max. 8388607)
+ 54 named destinations out of 1000 (max. 500000)
+ 188 words of extra memory for PDF output out of 10000 (max. 10000000)
 

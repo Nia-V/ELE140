@@ -365,15 +365,61 @@
 	% outputs. • Each figure and table must include a numbered caption that describes it (at the top for tables
 	% and at the bottom for figures). Remember to indicate at the top of your truth tables which
 	% variables are the inputs and outputs.
+	\section{Résultat et discussion}
+	\paragraph{}
+	Cette section sera sujet de nos résultats ainsi que de nos conclusions faisant référence à ceux-ci. Pour visualiser nos résultats, nous devions utiliser des	chronogrammes afin de pouvoir illustrer l’évolution temporelle de nos entrées et sorties.\\
+	\subsection{Chronogramme de cellule-type}
 	
 	
+	\subparagraph{}
+
+Dans celui de la cellule type, généré avec Waveform, il faut qu’il soit représentatif de la table de vérité de la cellule-type. Étant donné le chronogramme mis ci-dessous, nous avons donc eu une bonne représentation graphique de notre table de vérité montrant les sorties Xout et Yout étant à 1.
 	
-	
-	
-	
-	
-	
-	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{"2025-10-29 14 22 27"}
+		\caption{}
+		\label{fig:2025-10-29-14-22-27} Chronogramme de la cellule-type
+	\end{figure}
+	\newpage
+\subsection{Chronogramme de Test Bench}
+\paragraph{}
+Dans le chronogramme du test Bench, il faut qu’il soit représentatif du circuit dans tout son entièreté. Il faut donc se fier aux équations de sorties trouver dans les tables de Karnaugh des signaux d’intercellules.\\\\
+Nous voyons  aussi  dans le chronogramme les fonctionnements de comparaison :\\\\
+\begin{itemize}
+	\item Le fonctionnement d’une comparaison  +/+ : Veux dire que l’on compare directement les bits A et B \\\\
+	\item Le fonctionnement d’une comparaison -/- :  Veux dire que l’on inverse la valeur de A et B et ensuite on les compare~\\\\
+	\item Le fonctionnement d’une comparaison +/- : Veux dire que la Valeur A ou B est inversé et puis on la compare à la valeur  de l’autre bit\\\\
+\end{itemize}
+Ainsi, étant donné le chronogramme mis ci-dessous, nous avons donc eu une bonne représentation graphique de notre table de vérité montrant les sorties PGout, PPout et EGout. \\\\
+Nous voyons le fonctionnement d’une comparaison +/+, qui veux dire que les valeurs de A et B sont égales et positives. Le fonctionnement d’une comparaison -/-, qui veux dire que les
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{"2025-10-29 15 32 39"}
+	\caption{}
+	\label{fig:2025-10-29-15-32-39}Chronogramme du textbench
+\end{figure}
+
+
+
+
+\subsection{Fichier data.out}
+\subparagraph{} Le fichier data.out a été généré par un banc  d’essai VHDL. Cependant, pour générer ce fichier, il faut tout d’abord compiler les fichiers VHDL de notre design en utilisant des scripts que nous avons complétés. Ensuite il faut lancer une simulation dans la fenêtre de commande dans le logiciel Modelsim. En comparant les entrées A et B avec les signaux intercellules, nous avons un résultat à la fin de chaque ligne qui nous indique si l’on a réussi. Dans notre cas, nous avons juste eu des réussites. Ceci veut dire que la procédure a fonctionné.
+
+
+\subsection{Résultat implémentation matérielle}
+\subparagraph{}Pour réaliser au niveau matérielle notre design, nous avons dû l’implémenter dans un circuit programmable  FPGA. Pour l’implémenter il fallait : 
+
+\begin{enumerate}
+	\item Reproduire le schéma bloc donné dans le laboratoire
+	\item Assigner les broches d’entrées, d’interrupteurs et de DEL dans un fichier QSF
+	\item Configurer le FPGA  dans Quartus selon la procédure
+	\item Télécharger le design dans le FPGA
+\end{enumerate}
+\section{Conclusion}
+\paragraph{}
+Ce laboratoire a permis de concevoir  un comparateur  4 bits en complément à deux.  Nous avons d’abord effectué une préparation avant chaque séance de laboratoire afin que nous puissions comprendre le fonctionnement général des circuits itératif. Après cette préparation, nous avons pu écrire en VHDL nos circuits planifiés. La simulation de notre design nous a permis de visualiser les entrées et les sorties que nous avions déclarées afin valider la fonctionnalité de notre design. Enfin, l’implémentation de notre circuit en FPGA nous a permis de valider en conditions réelles la logique conçue en VHDL. Malgré le bon déroulement du laboratoire, nous éprouvions des difficultés à ouvrir les fichiers du laboratoire sur des postes autre que l’ordinateur source. Ceci est probablement dû à l’utilisation des outils infonuagiques.
+
 \end{document}
 
 

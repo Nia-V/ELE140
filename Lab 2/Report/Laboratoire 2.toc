@@ -20,3 +20,15 @@
 \contentsline {subsection}{\numberline {5.1}Définition}{4}{subsection.5.1}%
 \contentsline {subparagraph}{}{4}{section*.11}%
 \contentsline {subsection}{\numberline {5.2}K-Maps: $X_{out}$ et $Y_{out}$}{5}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Résultat et discussion}{5}{section.6}%
+\contentsline {paragraph}{}{5}{section*.15}%
+\contentsline {subsection}{\numberline {6.1}Chronogramme de cellule-type}{5}{subsection.6.1}%
+\contentsline {subparagraph}{}{5}{section*.16}%
+\contentsline {subsection}{\numberline {6.2}Chronogramme de Test Bench}{6}{subsection.6.2}%
+\contentsline {paragraph}{}{6}{section*.18}%
+\contentsline {subsection}{\numberline {6.3}Fichier data.out}{6}{subsection.6.3}%
+\contentsline {subparagraph}{}{6}{section*.20}%
+\contentsline {subsection}{\numberline {6.4}Résultat implémentation matérielle}{6}{subsection.6.4}%
+\contentsline {subparagraph}{}{6}{section*.21}%
+\contentsline {section}{\numberline {7}Conclusion}{7}{section.7}%
+\contentsline {paragraph}{}{7}{section*.22}%
