@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.10)  12 NOV 2025 19:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.10)  12 NOV 2025 19:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1375,11 +1375,11 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
  ***********
 Package rerunfilecheck Info: File `"Laboratoire 2".out' has not changed.
-(rerunfilecheck)             Checksum: 3261729259AFE5BCC66B8A937C438809;4068.
+(rerunfilecheck)             Checksum: 1C058FF48E7142DA505EAAFE7231674D;4770.
  ) 
 Here is how much of TeX's memory you used:
  30010 strings out of 467871
- 578995 string characters out of 5418375
+ 578959 string characters out of 5418375
  1033599 words of memory out of 5000000
  58321 multiletter control sequences out of 15000+600000
  643991 words of font info for 87 fonts, out of 8000000 for 9000
@@ -1410,9 +1410,9 @@ a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/niave
 s/niave/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><
 C:/Users/niave/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cms
 y9.pfb>
-Output written on "Laboratoire 2.pdf" (8 pages, 552473 bytes).
+Output written on "Laboratoire 2.pdf" (8 pages, 558597 bytes).
 PDF statistics:
- 557 PDF objects out of 1000 (max. 8388607)
+ 572 PDF objects out of 1000 (max. 8388607)
  54 named destinations out of 1000 (max. 500000)
  188 words of extra memory for PDF output out of 10000 (max. 10000000)
 

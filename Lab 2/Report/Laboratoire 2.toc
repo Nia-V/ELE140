@@ -1,34 +1,34 @@
 \babel@toc {french}{}\relax 
-\contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
+\contentsline {section}{\numberline {1}Introduction (Voyatzis)}{2}{section.1}%
 \contentsline {subparagraph}{}{2}{section*.2}%
-\contentsline {section}{\numberline {2}Cellule-type}{2}{section.2}%
+\contentsline {section}{\numberline {2}Cellule-type (Voyatzis)}{2}{section.2}%
 \contentsline {subsection}{\numberline {2.1}La définition générale d'une cellule-type}{2}{subsection.2.1}%
 \contentsline {subparagraph}{}{2}{section*.3}%
 \contentsline {subsection}{\numberline {2.2}La définition spécifique de la cellule-type pour comparaison}{2}{subsection.2.2}%
 \contentsline {subparagraph}{}{2}{section*.4}%
-\contentsline {section}{\numberline {3}Schéma fonctionnel du comparateur}{3}{section.3}%
+\contentsline {section}{\numberline {3}Schéma fonctionnel du comparateur (Voyatzis)}{3}{section.3}%
 \contentsline {subsection}{\numberline {3.1}La définition des signaux inter cellules}{3}{subsection.3.1}%
 \contentsline {subparagraph}{}{3}{section*.6}%
 \contentsline {subsection}{\numberline {3.2}La définition des signaux inter cellules $X_{out}$ et $Y_{out}$}{3}{subsection.3.2}%
 \contentsline {subparagraph}{}{3}{section*.7}%
 \contentsline {subsection}{\numberline {3.3}Comparateur}{3}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Table de vérité pour la cellule-type}{3}{section.4}%
+\contentsline {section}{\numberline {4}Table de vérité pour la cellule-type (Voyatzis)}{3}{section.4}%
 \contentsline {subsection}{\numberline {4.1}La définition générale d'une table de vérité}{3}{subsection.4.1}%
 \contentsline {subparagraph}{}{3}{section*.9}%
 \contentsline {subsection}{\numberline {4.2}Table de vérité}{4}{subsection.4.2}%
-\contentsline {section}{\numberline {5}Tables de Karnaugh: $X_{out}$ et $Y_{out}$}{4}{section.5}%
+\contentsline {section}{\numberline {5}Tables de Karnaugh: $X_{out}$ et $Y_{out}$ (Voyatzis)}{4}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Définition}{4}{subsection.5.1}%
 \contentsline {subparagraph}{}{4}{section*.11}%
 \contentsline {subsection}{\numberline {5.2}K-Maps: $X_{out}$ et $Y_{out}$}{5}{subsection.5.2}%
-\contentsline {section}{\numberline {6}Résultat et discussion}{5}{section.6}%
+\contentsline {section}{\numberline {6}Résultat et discussion(Louis-Jean)}{5}{section.6}%
 \contentsline {paragraph}{}{5}{section*.15}%
-\contentsline {subsection}{\numberline {6.1}Chronogramme de cellule-type}{5}{subsection.6.1}%
+\contentsline {section}{\numberline {7}Chronogramme de cellule-type (Louis-Jean)}{5}{section.7}%
 \contentsline {subparagraph}{}{5}{section*.16}%
-\contentsline {subsection}{\numberline {6.2}Chronogramme de Test Bench}{6}{subsection.6.2}%
+\contentsline {section}{\numberline {8}Chronogramme de Test Bench (Louis-Jean)}{6}{section.8}%
 \contentsline {paragraph}{}{6}{section*.18}%
-\contentsline {subsection}{\numberline {6.3}Fichier data.out}{6}{subsection.6.3}%
+\contentsline {section}{\numberline {9}Fichier data.out (Louis-Jean)}{6}{section.9}%
 \contentsline {subparagraph}{}{6}{section*.20}%
-\contentsline {subsection}{\numberline {6.4}Résultat implémentation matérielle}{6}{subsection.6.4}%
+\contentsline {section}{\numberline {10}Résultat implémentation matérielle (Louis-Jean)}{6}{section.10}%
 \contentsline {subparagraph}{}{6}{section*.21}%
-\contentsline {section}{\numberline {7}Conclusion}{7}{section.7}%
+\contentsline {section}{\numberline {11}Conclusion (Louis-Jean)}{7}{section.11}%
 \contentsline {paragraph}{}{7}{section*.22}%
