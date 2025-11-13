@@ -15,12 +15,7 @@ constant upperbound : std_logic_vector(11 downto 0) := "011111111111";
 signal actoverflow : std_logic;
 signal unconstrainedsum :  std_logic_vector(11 downto 0);
 signal carry : std_logic_vector(0 to 12):= "0000000000000";
-component CompNBits
-        port(
-            A, B       : in  std_logic_vector(11 downto 0);
-				PP : out std_logic
-        );
-    end component;
+
 component Adder
          port(
         A   : in  std_logic;
@@ -47,20 +42,13 @@ gen_cells: for i in 0 to 11 generate
         );
     end generate;
 
-        cell_inst1: CompNBits
-        port map(
-		  
-            A   => unconstrainedsum,
-            B   => upperbound,
-				PP => actoverflow
-        );
 
 		  
 
 
 process (A,B)
 begin
-if actoverflow = '1' then
+if unconstrainedsum = '1' then
 S <= unconstrainedsum;
 elsif actoverflow = '0'then
 S <= "011111111111";
