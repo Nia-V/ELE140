@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.10)  12 NOV 2025 19:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.10)  12 NOV 2025 20:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1330,22 +1330,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 387--389
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 390--391
+Underfull \hbox (badness 10000) in paragraph at lines 390--392
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 390--391
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 391--392
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 391--392
+Underfull \hbox (badness 10000) in paragraph at lines 390--392
 
  []
 
@@ -1356,19 +1346,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 392--393
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 392--393
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 393--395
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 393--395
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 396--397
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 396--397
 
  []
 
 <2025-10-29 15 32 39.png, id=173, 1918.16624pt x 1044.90375pt>
 File: 2025-10-29 15 32 39.png Graphic file (type png)
 <use 2025-10-29 15 32 39.png>
-Package pdftex.def Info: 2025-10-29 15 32 39.png  used on input line 398.
+Package pdftex.def Info: 2025-10-29 15 32 39.png  used on input line 400.
 (pdftex.def)             Requested size: 338.58632pt x 184.43935pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 394--401
-
- []
-
 [6 <./2025-10-29 15 32 39.png (PNG copy)>] [7] (Laboratoire 2.aux)
  ***********
 LaTeX2e <2025-11-01>
@@ -1410,7 +1415,7 @@ a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/niave
 s/niave/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><
 C:/Users/niave/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cms
 y9.pfb>
-Output written on "Laboratoire 2.pdf" (8 pages, 558597 bytes).
+Output written on "Laboratoire 2.pdf" (8 pages, 558532 bytes).
 PDF statistics:
  572 PDF objects out of 1000 (max. 8388607)
  54 named destinations out of 1000 (max. 500000)
