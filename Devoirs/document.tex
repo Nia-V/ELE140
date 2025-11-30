@@ -1,0 +1,82 @@
+%=================================================================
+% Modèle de devoir - Version française
+% Auteur : <Votre nom>
+% Description : Modèle LaTeX pour soumissions de devoirs
+%=================================================================
+
+\documentclass[12.0 pt,a4paper]{article}
+
+ 
+\usepackage{ifluatex}
+\ifluatex
+\usepackage{pdftexcmds}
+\makeatletter
+\let\pdfstrcmp\pdf@strcmp
+\let\pdffilemoddate\pdf@filemoddate
+\makeatother
+\fi
+\usepackage{svg}
+\setsvg{inkscape={"C:/Program Files/Inkscape/inkscape.exe"= -z -C}}
+%---------------------------------------------------------------
+% PACKAGES
+%---------------------------------------------------------------
+\usepackage[T1]{fontenc}              % Encodage correct
+\usepackage[utf8]{inputenc}           % Support UTF-8
+\usepackage[french]{babel}            % Langue française
+\usepackage{geometry}                 % Marges
+\geometry{margin=2.0cm}
+\usepackage{ amssymb }
+\usepackage{amsmath,amssymb,amsthm}   % Math
+\usepackage{graphicx}                 % Images
+\usepackage{array}                    % Tableaux avancés
+\usepackage{tikz}                     % K-maps, circuits logiques
+\usetikzlibrary{matrix, positioning, automata, positioning, arrows.meta}  % Bibliothèques TikZ nécessaires
+
+\usepackage{caption}                  % Légendes personnalisées
+\usepackage{multirow}                 % Cellules multi-lignes
+\usepackage{xcolor}                   % Couleurs
+\usepackage{fancyhdr}                 % En-têtes / pieds de page
+\usepackage{hyperref}                 % Liens hypertextes
+\usepackage{float}                    % Placement précis
+\usepackage{datetime}                 % Formatage de dates
+\usetikzlibrary{calc}
+\usepackage{tabu}
+\usetikzlibrary{shapes, arrows, positioning}
+\usepackage{changepage} % allows local margin changes
+\usepackage{subfigure}
+%---------------------------------------------------------------
+% INFORMATIONS DU COURS ET DU GROUPE
+%---------------------------------------------------------------
+\newcommand{\codeclasse}{ELE140}                     % Code du cours
+\newcommand{\nomclasse}{Conception des systèmes numériques} % Nom du cours
+\newcommand{\titredevoir}{Laboratoire 2} % Titre du devoir
+\newcommand{\groupe}{-01}
+\newcommand{\enseignant}{Myiah Catwell}
+\newcommand{\datedepot}{\today}
+\newcommand{\Session}{A25}
+\newcommand{\auteurs}{
+	Ourania Voyatzis~(VOYO78260401)\\
+	Jhermain Louis-Jean~(LOUJ67360401)}
+
+%---------------------------------------------------------------
+% MISE EN PAGE
+%---------------------------------------------------------------
+\pagestyle{fancy}
+\fancyhead[L]{\codeclasse\groupe}
+\fancyhead[C]{\titredevoir}
+\fancyhead[R]{\thepage}
+\fancyfoot{}
+
+%---------------------------------------------------------------
+% DÉBUT DU DOCUMENT
+%---------------------------------------------------------------
+\begin{document}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{"BRUH (2)"}
+	\caption{}
+	\label{fig:bruh-2}
+\end{figure}
+
+
+\end{document}
