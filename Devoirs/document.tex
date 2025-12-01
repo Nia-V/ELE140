@@ -245,7 +245,7 @@
 
 \subsection*{Tables de Karnaugh des Bascules (Combinatoire) b)}
 \paragraph*{}
-Dans les états indéfinis (001,101), nous revenons à l'état initial (tout à 1) afin de minimiser les risques.
+Dans les états indéfinis (110,101), nous revenons à l'état initial (tout à 1) afin de minimiser les risques.
 \begin{figure}[H]
 	\centering
 	\subsection*{Q2*} % use subsection* to avoid numbering
@@ -386,9 +386,9 @@ end MEFDev2_arch;
 J'ai décidé de renommer d'abord les variables pour rendre le code plus lisible.\\\\
 
 
-	\subsection*{Étape 2: Q2Q1Q0 et Z}
+	\subsection*{Étape 2: Q2*Q1*Q0* et Z}
 	\paragraph*{}
-	À partir des équations ci-dessus, nous pouvons déduire les tableaux et équations suivants :\\
+	À partir des instructions if dans le vhdl, nous pouvons déduire les tableaux et équations suivants :\\
 	
 	
 	\begin{figure}[H]
@@ -538,7 +538,7 @@ J'ai décidé de renommer d'abord les variables pour rendre le code plus lisible
 	\caption{}
 
 \end{figure}
-\section*{Q2 b) }
+\section*{Q2 b) De quel type de circuit s’agit-il?}
 \paragraph*{}
 Il s'agit d'un circuit de Moore car les signaux d'entrée n'affectent pas directement les sorties de manière asynchrone.
 \section*{Q2 c) Commentez sur la qualité de ce code VHDL}
