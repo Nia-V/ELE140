@@ -1,0 +1,32 @@
+#============================= TB_Test.do ======================================
+#ELE140 Conception des systèmes numeriques
+#AUT2025, Ecole de technologie superieure
+#================================================================================
+#Clean up
+vlib work
+vdel -all work
+vlib work
+vmap work work
+
+# Compilation de tous les fichiers en ordre hierarchique
+vcom num1.vhd
+vcom TestBenchnum1.vhd
+
+
+# Declaration de l'entite a simuler
+vsim TestBenchnum1	
+
+#add wave *
+
+add wave *
+
+configure wave -namecolwidth 300
+configure wave -namecolwidth 100
+update
+
+
+run 3000 ns
+
+
+# Zoomer sur la periode de simulation
+wave zoom full

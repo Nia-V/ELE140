@@ -1,0 +1,50 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity DECODEUR is
+    port(
+		  SEQ : in  std_logic;
+		  CLK : in  std_logic;
+        S   : in  std_logic;
+		  Q0   : in  std_logic;
+		  Q1   : in  std_logic;
+		  Q2   : in  std_logic;
+		  Q3   : in  std_logic;
+		  FQ0   : OUT  std_logic;
+		  FQ1   : OUT  std_logic;
+		  FQ2   : OUT  std_logic;
+		  FQ3   : OUT  std_logic;
+        C   : OUT  std_logic;
+		  B   : OUT  std_logic;
+		  A   : OUT  std_logic;
+		  
+    );
+end DECODEUR;
+
+architecture ARCH_DEC of DECODEUR is
+begin
+
+process (CLK, SEQ)
+begin
+	 IF SEQ  = '0' THEN 
+	 C <= '0';
+	 B <= '0';
+	 A <= '0';
+	 FQ0 <= '0';
+	 FQ1 <= '0';
+	 FQ2 <= '0';
+	 FQ3 <= '0';
+	ELSE
+	 C <= (Q3 AND Q2 OR Q0);
+	 B <= (Q3 AND NOT Q2) OR Q0;
+	 A <= Q1; 
+	 FQ0 <= (NOT(S) AND NOT(Q3) AND NOT(Q2) AND (NOT(Q1) AND Q0 OR (Q1 AND NOT(Q0))))) OR (S AND (NOT(Q3) AND NOT(Q2) OR (NOT(Q1) AND Q0) OR (Q3 AND Q0)))
+	 FQ1 <= (((NOT S)AND ((NOT Q0 AND NOT Q3 AND NOT Q2)OR(Q1 AND NOT Q0)OR(Q2 AND NOT Q1 AND Q0)OR(Q3 AND NOT Q1 AND Q0)))OR((S)AND((NOT QQ1 AND Q0 AND((NOT Q3 AND Q2) OR (Q3 AND NOT Q2)))OR(Q1 AND NOT Q0 AND(Q2 OR Q3))))
+	 FQ2 <= '0';
+	 FQ3 <= '0';
+	
+END IF;
+
+end process;
+
+end ARC_DECODEUR;
