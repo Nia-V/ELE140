@@ -1,0 +1,108 @@
+%% Creator: Inkscape 1.4.2 (f4327f4, 2025-05-13), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'BRUH.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{308.52282967bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.5781882)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{BRUH.pdf}}%
+    \put(0.20741699,0.47116613){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Z=0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{BRUH.pdf}}%
+    \put(0.20805632,0.07507013){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Z=0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{BRUH.pdf}}%
+    \put(0.20741698,0.13123526){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}X2\end{tabular}}}}%
+    \put(0.20763107,0.33205298){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}X1\end{tabular}}}}%
+    \put(0.20837596,0.52466909){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}X4\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{BRUH.pdf}}%
+    \put(0.48774717,0.3052005){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}000\end{tabular}}}}%
+    \put(0.48752118,0.2800627){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Z=0\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{BRUH.pdf}}%
+    \put(0.48796125,0.33843794){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}INIT\\\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{BRUH.pdf}}%
+    \put(0.48730124,0.38177068){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}A'B'\end{tabular}}}}%
+    \put(0.33987747,0.35056401){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}A'B'\end{tabular}}}}%
+    \put(0.65632954,0.19858208){\color[rgb]{0,0,0}\rotatebox{-35.25950961}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}A'B'\end{tabular}}}}}%
+    \put(0.35575948,0.18746481){\color[rgb]{0,0,0}\rotatebox{33.42256566}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}A'B'\end{tabular}}}}}%
+    \put(0.37636206,0.41252098){\color[rgb]{0,0,0}\rotatebox{-43.64665378}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}A'B'\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{BRUH.pdf}}%
+    \put(0.34018667,0.29710815){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}A'B\end{tabular}}}}%
+    \put(0.48954929,0.08215527){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}A'B\end{tabular}}}}%
+    \put(0.7806739,0.52416363){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}OK\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{BRUH.pdf}}%
+    \put(0.8263011,0.56512601){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}A'B'\end{tabular}}}}%
+    \put(0.61443185,0.41819158){\color[rgb]{0,0,0}\rotatebox{28.2090709}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}A'B\end{tabular}}}}}%
+    \put(0.96995115,0.30311583){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}A'B\end{tabular}}}}%
+    \put(0.2326101,0.41019443){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}A'B\end{tabular}}}}%
+    \put(0.23121615,0.2129328){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}A'B\end{tabular}}}}%
+    \put(0.32716073,0.22377194){\color[rgb]{0,0,0}\rotatebox{33.0821643}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}AB\end{tabular}}}}}%
+    \put(0.14458765,0.34004855){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}AB\end{tabular}}}}%
+    \put(0.02367163,0.31387488){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}AB\end{tabular}}}}%
+    \put(0.72592623,0.05231125){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}AB\end{tabular}}}}%
+    \put(0.48303113,0.51934411){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}AB\end{tabular}}}}%
+    \put(0.62666855,0.40149724){\color[rgb]{0,0,0}\rotatebox{30.00963154}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}AB\end{tabular}}}}}%
+    \put(0.49199905,0.22569625){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}AB'\end{tabular}}}}%
+    \put(0.15600841,0.24727052){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}AB'\end{tabular}}}}%
+    \put(0.15010539,0.03437341){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}AB'\end{tabular}}}}%
+    \put(0.83826217,0.05706101){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}AB'\end{tabular}}}}%
+    \put(0.15321916,0.55747244){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}AB'\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{BRUH.pdf}}%
+    \put(0.78198182,0.13122426){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}X3\end{tabular}}}}%
+    \put(0.65195225,0.36942543){\color[rgb]{0,0,0}\rotatebox{27.11125722}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}AB'\end{tabular}}}}}%
+    \put(0.20741699,0.29081593){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}001\end{tabular}}}}%
+    \put(0.20741699,0.09018062){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}010\end{tabular}}}}%
+    \put(0.7806739,0.09018062){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}011\end{tabular}}}}%
+    \put(0.20741699,0.48513587){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}100\end{tabular}}}}%
+    \put(0.78005123,0.48727056){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}101\end{tabular}}}}%
+    \put(0.20700139,0.27564005){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Z=1\end{tabular}}}}%
+    \put(0.7810527,0.07522162){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Z=1\end{tabular}}}}%
+    \put(0.78117484,0.47457282){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Z=1\end{tabular}}}}%
+  \end{picture}%
+\endgroup%
