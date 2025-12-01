@@ -78,7 +78,7 @@
 		\textbf{Date :} \datedepot
 		\vspace*{\fill}
 	\end{titlepage}
-	\section*{Q.1 a)}
+	\section*{Q.1 a) Assignement des bascules de type « simplest » avec une gestion des coûts minimums}
 \subsection*{Assignement des Bascules: "simplest"}
 \begin{figure}[H]
 \centering{\begin{tabular}{|c|c|}
@@ -213,7 +213,7 @@
 	\end{tikzpicture}
 	\caption*{$Q0^*(A, B, Q2, Q1, Q0) = A'B'Q2Q0 + A'BQ0' + AQ2'Q0 + BQ2Q0' + A'BQ1$}
 \end{figure}
-\section*{Q1 b)}
+\section*{Q1 b)  Tableau 2 (décomposé) avec une gestion des risques minimums}
 \subsection*{Table de transitions}
 \begin{figure}[H]
 	\centering{\begin{tabular}{|c|c|c|c|c|c|}
@@ -334,17 +334,15 @@ Dans les états indéfinis (001,101), nous revenons à l'état initial (tout à 
 		\node[left=4pt of m-3-1, rotate=90, anchor=south] {$AB$};
 		\node[left=4pt of m-4-1, rotate=90, anchor=south] {$A\overline{B}$};
 	\end{tikzpicture}
-	\caption{$Q0^*(A, B, Q2, Q1, Q0) = AQ2'Q0 + A'B'Q2' + Q2Q1'Q0 + B'Q2Q1 + A'BQ0' + AQ2Q0'$}
+	\caption*{$Q0^*(A, B, Q2, Q1, Q0) = AQ2'Q0 + A'B'Q2' + Q2Q1'Q0 + B'Q2Q1 + A'BQ0' + AQ2Q0'$}
 \end{figure}
-\section*{Q1 c)}
+\section*{Q1 c) Quel est le système (a ou b) qui comporte le moins de logique combinatoire ?}
 \paragraph*{}
 Dans ce cas, le premier circuit A possède le moins de portes logiques.
 
-\section*{Q.2 a)}	
+\section*{Q.2 a) a) Tracez le diagramme d’états en prenant soin de bien détailler votre démarche}	
 \subsection*{Étape 1}
-\paragraph*{}
-J'ai décidé de renommer d'abord les variables pour rendre le code plus lisible.
-		\begin{figure}[H]\footnotesize
+\begin{figure}[H]\footnotesize
 \begin{lstlisting}[language=vhdl]
 library ieee;
 use ieee.std_logic_1164.all;
@@ -384,8 +382,9 @@ Q2 <= '0' when Q ="110" and A ='1' else
 end MEFDev2_arch;
 \end{lstlisting}
 \end{figure}
+\paragraph*{}
+J'ai décidé de renommer d'abord les variables pour rendre le code plus lisible.\\\\
 
-\clearpage
 
 	\subsection*{Étape 2: Q2Q1Q0 et Z}
 	\paragraph*{}
@@ -539,10 +538,10 @@ end MEFDev2_arch;
 	\caption{}
 
 \end{figure}
-\section*{Q2 b)}
+\section*{Q2 b) }
 \paragraph*{}
-C'est un circuit de Moore car il n'a pas de signaux de rétroaction.
-\section*{Q2 c)}
+Il s'agit d'un circuit de Moore car les signaux d'entrée n'affectent pas directement les sorties de manière asynchrone.
+\section*{Q2 c) Commentez sur la qualité de ce code VHDL}
 \paragraph*{}
 Le code est très difficile à lire en raison des noms étranges ainsi que du fait que la logique combinatoire est divisée entre 2 blocs de code séparés, et ils ont utilisé inutilement des signaux binaires pour chaque bascule individuelle. Il y a peut-être encore plus de raisons pour lesquelles ce code ne suit pas les bonnes pratiques que j'ai peut-être manquées.
 	

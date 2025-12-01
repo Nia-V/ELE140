@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.29)  1 DEC 2025 03:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.29)  1 DEC 2025 09:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1348,23 +1348,31 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.216 \section
-              *{Q1 b)} [1 <./BRUH.pdf>] [2] [3]
+              *{Q1 b)  Tableau 2 (décomposé) avec une gestion des risques ...
+[1 <./BRUH.pdf>] [2] [3]
 (C:\Users\niave\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2025/10/06 1.11 listings language file
 )
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 392--393
+Underfull \hbox (badness 10000) in paragraph at lines 386--387
 
  []
 
-<Untitled.pdf, id=114, 200.85716pt x 202.81125pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 386--387
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 391--392
+
+ []
+
+<Untitled.pdf, id=112, 200.85716pt x 202.81125pt>
 File: Untitled.pdf Graphic file (type pdf)
 <use Untitled.pdf>
-Package pdftex.def Info: Untitled.pdf  used on input line 538.
+Package pdftex.def Info: Untitled.pdf  used on input line 537.
 (pdftex.def)             Requested size: 241.84843pt x 244.214pt.
-[5
-
-] [6 <./Untitled.pdf>] (document.aux)
+[5] [6 <./Untitled.pdf>] (document.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
@@ -1378,17 +1386,17 @@ Package rerunfilecheck Info: File `document.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 32574 strings out of 467871
- 621655 string characters out of 5418375
- 1287924 words of memory out of 5000000
- 60824 multiletter control sequences out of 15000+600000
+ 32576 strings out of 467871
+ 621678 string characters out of 5418375
+ 1287826 words of memory out of 5000000
+ 60826 multiletter control sequences out of 15000+600000
  640121 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,18n,104p,1041b,1372s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\niave\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm
-0800.pk> <C:\Users\niave\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\ecbx0800.pk> <C:\Users\niave\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
-/dpi600\eccc1000.pk> <C:\Users\niave\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
+ 84i,18n,104p,1041b,1374s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\niave\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc
+1000.pk> <C:\Users\niave\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
+0\ecrm0800.pk> <C:\Users\niave\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
+/dpi600\ecbx0800.pk> <C:\Users\niave\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
 pen/ec/dpi600\ecbx1200.pk> <C:\Users\niave\AppData\Local\MiKTeX\fonts/pk/ljfour
 /jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\niave\AppData\Local\MiKTeX\fonts/pk/
 ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\niave\AppData\Local\MiKTeX\fon
@@ -1401,9 +1409,9 @@ Users/niave/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.p
 fb><C:/Users/niave/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
 /cmr7.pfb><C:/Users/niave/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
 onts/cm/cmsy7.pfb>
-Output written on document.pdf (7 pages, 201952 bytes).
+Output written on document.pdf (7 pages, 208515 bytes).
 PDF statistics:
- 463 PDF objects out of 1000 (max. 8388607)
+ 478 PDF objects out of 1000 (max. 8388607)
  90 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
