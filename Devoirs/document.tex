@@ -44,9 +44,9 @@
 %---------------------------------------------------------------
 \newcommand{\codeclasse}{ELE140}                     % Code du cours
 \newcommand{\nomclasse}{Conception des systèmes numériques} % Nom du cours
-\newcommand{\titredevoir}{Laboratoire 2} % Titre du devoir
-\newcommand{\groupe}{-01}
-\newcommand{\enseignant}{Myiah Catwell}
+\newcommand{\titredevoir}{Devoir 2} % Titre du devoir
+\newcommand{\groupe}{01}
+\newcommand{\enseignant}{François Blanchard}
 \newcommand{\datedepot}{\today}
 \newcommand{\Session}{A25}
 \newcommand{\auteurs}{
@@ -66,6 +66,18 @@
 % DÉBUT DU DOCUMENT
 %---------------------------------------------------------------
 \begin{document}
+	\begin{titlepage}
+		\vspace*{\fill} 
+		\centering
+		{ \textbf{\nomclasse\ (\codeclasse)}}\\[0.5em]
+		{ \textbf{\titredevoir}}\\[0.5em]
+		\textbf{Enseignant :} \enseignant \\[1em]
+		\textbf{Groupe :} \groupe \\[0.5em]
+		\textbf{Remis par :}\\[0.5em]
+		\auteurs \\[1.0em]
+		\textbf{Date :} \datedepot
+		\vspace*{\fill}
+	\end{titlepage}
 	\section*{Q.1 a)}
 \subsection*{Assignement des Bascules: "simplest"}
 \begin{figure}[H]
@@ -90,8 +102,6 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\linewidth]{BRUH}
-	\caption{}
-	\label{fig:bruh}
 \end{figure}
 \subsection*{Table de transitions}
 \begin{figure}[H]
@@ -224,6 +234,10 @@
 			\hline
 			\rule[-1ex]{0pt}{2.5ex} 100 & 100 & 111 & 111 & 111 & 1 \\
 			\hline
+			\rule[-1ex]{0pt}{2.5ex} 110 & 111 & 111 & 111 & 111 & 0 \\
+			\hline
+			\rule[-1ex]{0pt}{2.5ex} 101 & 111 & 111 & 111 & 111 & 0 \\
+			\hline
 			\rule[-1ex]{0pt}{2.5ex}  & \multicolumn{4}{c|}{Q2*Q1*Q0*} &  \\
 			\hline
 	\end{tabular}}
@@ -325,12 +339,12 @@ Dans les états indéfinis (001,101), nous revenons à l'état initial (tout à 
 \section*{Q1 c)}
 \paragraph*{}
 Dans ce cas, le premier circuit A possède le moins de portes logiques.
-\clearpage
-\section*{Q.2}	
+
+\section*{Q.2 a)}	
 \subsection*{Étape 1}
 \paragraph*{}
 J'ai décidé de renommer d'abord les variables pour rendre le code plus lisible.
-		\begin{figure}[H]
+		\begin{figure}[H]\footnotesize
 \begin{lstlisting}[language=vhdl]
 library ieee;
 use ieee.std_logic_1164.all;
@@ -519,6 +533,17 @@ end MEFDev2_arch;
 		\end{figure}
 
 \subsection*{Étape 4: Diagramme d'état}
-	
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\linewidth]{Untitled}
+	\caption{}
+
+\end{figure}
+\section*{Q2 b)}
+\paragraph*{}
+C'est un circuit de Moore car il n'a pas de signaux de rétroaction.
+\section*{Q2 c)}
+\paragraph*{}
+Le code est très difficile à lire en raison des noms étranges ainsi que du fait que la logique combinatoire est divisée entre 2 blocs de code séparés, et ils ont utilisé inutilement des signaux binaires pour chaque bascule individuelle. Il y a peut-être encore plus de raisons pour lesquelles ce code ne suit pas les bonnes pratiques que j'ai peut-être manquées.
 	
 \end{document}

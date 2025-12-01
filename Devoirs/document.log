@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.29)  1 DEC 2025 01:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.29)  1 DEC 2025 03:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1317,71 +1317,93 @@ Package hyperref Info: Link coloring OFF on input line 68.
 \openout4 = `document.out'.
 
 \c@lstlisting=\count404
-LaTeX Font Info:    Trying to load font information for U+msa on input line 72.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <6.49994> not available
+(Font)              size <6> substituted on input line 78.
+
+[1
+
+{C:/Users/niave/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 84.
 
 
 (C:\Users\niave\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 72.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 84.
 
 
 (C:\Users\niave\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<BRUH.pdf, id=6, 309.33195pt x 177.8398pt>
+<BRUH.pdf, id=14, 309.33195pt x 177.8398pt>
 File: BRUH.pdf Graphic file (type pdf)
 <use BRUH.pdf>
-Package pdftex.def Info: BRUH.pdf  used on input line 92.
+Package pdftex.def Info: BRUH.pdf  used on input line 104.
 (pdftex.def)             Requested size: 338.58632pt x 194.66917pt.
 
-[1{C:/Users/niave/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
-
- <./BRUH.pdf>] [2] [3] [4]
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.216 \section
+              *{Q1 b)} [1 <./BRUH.pdf>] [2] [3]
 (C:\Users\niave\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2025/10/06 1.11 listings language file
 )
-[5
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 378--379
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 392--393
 
  []
 
-[6
+<Untitled.pdf, id=114, 200.85716pt x 202.81125pt>
+File: Untitled.pdf Graphic file (type pdf)
+<use Untitled.pdf>
+Package pdftex.def Info: Untitled.pdf  used on input line 538.
+(pdftex.def)             Requested size: 241.84843pt x 244.214pt.
+[5
 
-] (document.aux)
+] [6 <./Untitled.pdf>] (document.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
  ***********
+
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.49994pt have occurred.
+
 Package rerunfilecheck Info: File `document.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 32551 strings out of 467871
- 621275 string characters out of 5418375
- 1279354 words of memory out of 5000000
- 60808 multiletter control sequences out of 15000+600000
- 638579 words of font info for 68 fonts, out of 8000000 for 9000
+ 32574 strings out of 467871
+ 621655 string characters out of 5418375
+ 1287924 words of memory out of 5000000
+ 60824 multiletter control sequences out of 15000+600000
+ 640121 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,18n,104p,1041b,1353s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\niave\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx
-1000.pk> <C:\Users\niave\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\eccc1000.pk> <C:\Users\niave\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
-/dpi600\ecbx1200.pk> <C:\Users\niave\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
-pen/ec/dpi600\ecbx1440.pk> <C:\Users\niave\AppData\Local\MiKTeX\fonts/pk/ljfour
-/jknappen/ec/dpi600\ecrm1000.pk><C:/Users/niave/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/niave/AppData/Local/Programs
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/niave/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/niave/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/niave
-/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/User
-s/niave/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-
-Output written on document.pdf (6 pages, 157554 bytes).
+ 84i,18n,104p,1041b,1372s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\niave\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm
+0800.pk> <C:\Users\niave\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
+0\ecbx0800.pk> <C:\Users\niave\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
+/dpi600\eccc1000.pk> <C:\Users\niave\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
+pen/ec/dpi600\ecbx1200.pk> <C:\Users\niave\AppData\Local\MiKTeX\fonts/pk/ljfour
+/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\niave\AppData\Local\MiKTeX\fonts/pk/
+ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\niave\AppData\Local\MiKTeX\fon
+ts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\niave\AppData\Local\MiKT
+eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk><C:/Users/niave/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/niave/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/ni
+ave/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/
+Users/niave/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.p
+fb><C:/Users/niave/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmr7.pfb><C:/Users/niave/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmsy7.pfb>
+Output written on document.pdf (7 pages, 201952 bytes).
 PDF statistics:
- 347 PDF objects out of 1000 (max. 8388607)
- 85 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 463 PDF objects out of 1000 (max. 8388607)
+ 90 named destinations out of 1000 (max. 500000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
