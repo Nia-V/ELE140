@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.29)  30 NOV 2025 20:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.29)  30 NOV 2025 23:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1164,7 +1164,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 71.
 (C:\Users\niave\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<BRUH.pdf, id=10, 309.33195pt x 177.8398pt>
+<BRUH.pdf, id=6, 309.33195pt x 177.8398pt>
 File: BRUH.pdf Graphic file (type pdf)
 <use BRUH.pdf>
 Package pdftex.def Info: BRUH.pdf  used on input line 91.
@@ -1172,22 +1172,22 @@ Package pdftex.def Info: BRUH.pdf  used on input line 91.
 
 [1{C:/Users/niave/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
 
- <./BRUH.pdf>] [2] (document.aux)
+ <./BRUH.pdf>] [2] [3] [4] (document.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
  ***********
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: 834B3A8F7E0CD39DFD1EE862E55320B8;210.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 30730 strings out of 467871
- 596967 string characters out of 5418375
- 1086106 words of memory out of 5000000
- 59073 multiletter control sequences out of 15000+600000
- 637803 words of font info for 67 fonts, out of 8000000 for 9000
+ 30741 strings out of 467871
+ 597123 string characters out of 5418375
+ 1089106 words of memory out of 5000000
+ 59070 multiletter control sequences out of 15000+600000
+ 638579 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,16n,104p,1041b,1020s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,17n,104p,1041b,1020s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\niave\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc
 1000.pk> <C:\Users\niave\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
 0\ecbx1200.pk> <C:\Users\niave\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
@@ -1197,11 +1197,10 @@ ype1/public/amsfonts/cm/cmmi10.pfb><C:/Users/niave/AppData/Local/Programs/MiKTe
 X/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/niave/AppData/Local/Progra
 ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/niave/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/niave/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ni
-ave/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on document.pdf (2 pages, 111560 bytes).
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on document.pdf (4 pages, 121556 bytes).
 PDF statistics:
- 177 PDF objects out of 1000 (max. 8388607)
- 15 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 220 PDF objects out of 1000 (max. 8388607)
+ 28 named destinations out of 1000 (max. 500000)
+ 18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
