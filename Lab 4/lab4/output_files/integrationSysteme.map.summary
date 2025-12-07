@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Wed Nov 26 17:32:24 2025
+Analysis & Synthesis Status : Successful - Thu Dec 04 17:39:30 2025
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : integrationSysteme
-Top-level Entity Name : DECODEUR
+Top-level Entity Name : integrationSysteme
 Family : MAX 10
-Total logic elements : 11
-    Total combinational functions : 10
-    Dedicated logic registers : 7
-Total registers : 7
-Total pins : 6
+Total logic elements : 72
+    Total combinational functions : 62
+    Dedicated logic registers : 32
+Total registers : 32
+Total pins : 21
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

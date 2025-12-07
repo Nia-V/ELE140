@@ -1,4 +1,123 @@
-|DECODEUR
+|integrationSysteme
+LEDR[0] <= A.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= B.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= C.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] <= <GND>
+LEDR[4] <= <GND>
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= DA.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[8] <= DB.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[9] <= DC.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK50 => serialtester:inst3.clock
+CLOCK50 => RECEPTEUR:inst.CLK
+CLOCK50 => DECODEUR:inst2.CLK
+CLOCK50 => emetteur:inst1.CLK
+SW[0] => serialtester:inst3.s_i[0]
+SW[1] => serialtester:inst3.s_i[1]
+SW[2] => serialtester:inst3.s_i[2]
+SW[3] => serialtester:inst3.s_i[3]
+SW[4] => serialtester:inst3.s_i[4]
+SW[5] => serialtester:inst3.s_i[5]
+SW[6] => serialtester:inst3.s_i[6]
+SW[7] => serialtester:inst3.s_i[7]
+SW[8] => serialtester:inst3.s_i[8]
+SW[9] => serialtester:inst3.seq
+
+
+|integrationSysteme|RECEPTEUR:inst
+SEQ => Q[0].ACLR
+SEQ => Q[1].ACLR
+SEQ => Q[2].ACLR
+SEQ => Q[3].ACLR
+SEQ => Q[4].ACLR
+SEQ => A~reg0.ACLR
+SEQ => B~reg0.ACLR
+SEQ => C~reg0.ACLR
+CLK => Q[0].CLK
+CLK => Q[1].CLK
+CLK => Q[2].CLK
+CLK => Q[3].CLK
+CLK => Q[4].CLK
+CLK => A~reg0.CLK
+CLK => B~reg0.CLK
+CLK => C~reg0.CLK
+S => FQ.IN1
+S => FQ.IN1
+S => FQ.IN1
+S => FQ.IN1
+S => FQ.IN1
+C <= C~reg0.DB_MAX_OUTPUT_PORT_TYPE
+B <= B~reg0.DB_MAX_OUTPUT_PORT_TYPE
+A <= A~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|integrationSysteme|serialtester:inst3
+clock => seq_o~reg0.CLK
+clock => s_o~reg0.CLK
+clock => cntr[0].CLK
+clock => cntr[1].CLK
+clock => cntr[2].CLK
+clock => cntr[3].CLK
+seq => seq_o~reg0.DATAIN
+seq => s_o~reg0.ACLR
+seq => cntr[0].ACLR
+seq => cntr[1].ACLR
+seq => cntr[2].ACLR
+seq => cntr[3].PRESET
+seq => s_reg[0].LATCH_ENABLE
+seq => s_reg[1].LATCH_ENABLE
+seq => s_reg[2].LATCH_ENABLE
+seq => s_reg[3].LATCH_ENABLE
+seq => s_reg[4].LATCH_ENABLE
+seq => s_reg[5].LATCH_ENABLE
+seq => s_reg[6].LATCH_ENABLE
+seq => s_reg[7].LATCH_ENABLE
+seq => s_reg[8].LATCH_ENABLE
+seq => seq_o~reg0.ACLR
+s_i[0] => s_reg[0].DATAIN
+s_i[1] => s_reg[1].DATAIN
+s_i[2] => s_reg[2].DATAIN
+s_i[3] => s_reg[3].DATAIN
+s_i[4] => s_reg[4].DATAIN
+s_i[5] => s_reg[5].DATAIN
+s_i[6] => s_reg[6].DATAIN
+s_i[7] => s_reg[7].DATAIN
+s_i[8] => s_reg[8].DATAIN
+s_o <= s_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seq_o <= seq_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|integrationSysteme|emetteur:inst1
+CLK => DFFE_inst9.CLK
+CLK => DFFE_inst8.CLK
+CLK => DFFE_inst7.CLK
+CLK => DFFE_inst6.CLK
+CLK => DFF_inst5.CLK
+CLK => DFF_inst4.CLK
+CLK => DFF_inst3.CLK
+CLK => DFF_inst2.CLK
+CLK => DFFE_inst11.CLK
+CLK => DFFE_inst10.CLK
+CLK => SYNTHESIZED_WIRE_10.CLK
+SEQ => SYNTHESIZED_WIRE_10.PRESET
+SEQ => DFF_inst2.PRESET
+SEQ => DFF_inst3.PRESET
+SEQ => DFF_inst4.PRESET
+SEQ => DFF_inst5.PRESET
+SEQ => DFFE_inst9.ENA
+SEQ => DFFE_inst10.ENA
+SEQ => DFFE_inst11.ENA
+SEQ => DFFE_inst6.ENA
+SEQ => DFFE_inst7.ENA
+SEQ => DFFE_inst8.ENA
+A => DFFE_inst6.DATAIN
+B => DFFE_inst7.DATAIN
+C => DFFE_inst8.DATAIN
+TX <= SYNTHESIZED_WIRE_10.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|integrationSysteme|DECODEUR:inst2
 SEQ => Q[0].ACLR
 SEQ => Q[1].ACLR
 SEQ => Q[2].ACLR
@@ -13,9 +132,6 @@ CLK => Q[3].CLK
 CLK => A~reg0.CLK
 CLK => B~reg0.CLK
 CLK => C~reg0.CLK
-S => FQ.IN1
-S => FQ.IN1
-S => FQ.IN1
 S => FQ.IN1
 S => FQ.IN1
 S => FQ.IN1

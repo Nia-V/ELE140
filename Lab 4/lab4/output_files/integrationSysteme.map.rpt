@@ -1,5 +1,5 @@
 Analysis & Synthesis report for integrationSysteme
-Wed Nov 26 17:32:24 2025
+Thu Dec 04 17:39:30 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,10 +13,12 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -42,16 +44,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov 26 17:32:24 2025       ;
+; Analysis & Synthesis Status        ; Successful - Thu Dec 04 17:39:30 2025       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; integrationSysteme                          ;
-; Top-level Entity Name              ; DECODEUR                                    ;
+; Top-level Entity Name              ; integrationSysteme                          ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 11                                          ;
-;     Total combinational functions  ; 10                                          ;
-;     Dedicated logic registers      ; 7                                           ;
-; Total registers                    ; 7                                           ;
-; Total pins                         ; 6                                           ;
+; Total logic elements               ; 72                                          ;
+;     Total combinational functions  ; 62                                          ;
+;     Dedicated logic registers      ; 32                                          ;
+; Total registers                    ; 32                                          ;
+; Total pins                         ; 21                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -67,7 +69,7 @@ refer to the applicable agreement for further details.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M50DAF484C7G     ;                    ;
-; Top-level entity name                                            ; DECODEUR           ; integrationSysteme ;
+; Top-level entity name                                            ; integrationSysteme ; integrationSysteme ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -160,59 +162,87 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                      ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path               ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------+---------+
-; DECODEUR.vhd                     ; yes             ; User VHDL File  ; C:/Users/niave/Downloads/lab4/DECODEUR.vhd ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                   ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                         ; Library ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------+---------+
+; serialtester.vhd                 ; yes             ; User VHDL File                     ; C:/Users/niave/Downloads/lab4/serialtester.vhd       ;         ;
+; DECODEUR.vhd                     ; yes             ; User VHDL File                     ; C:/Users/niave/Downloads/lab4/DECODEUR.vhd           ;         ;
+; emetteur.vhd                     ; yes             ; User VHDL File                     ; C:/Users/niave/Downloads/lab4/emetteur.vhd           ;         ;
+; Recepteur.vhd                    ; yes             ; User VHDL File                     ; C:/Users/niave/Downloads/lab4/Recepteur.vhd          ;         ;
+; integrationSysteme.bdf           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/niave/Downloads/lab4/integrationSysteme.bdf ;         ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimated Total logic elements              ; 11    ;
-;                                             ;       ;
-; Total combinational functions               ; 10    ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 7     ;
-;     -- 3 input functions                    ; 3     ;
-;     -- <=2 input functions                  ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 10    ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 7     ;
-;     -- Dedicated logic registers            ; 7     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 6     ;
-;                                             ;       ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; Q[3]  ;
-; Maximum fan-out                             ; 7     ;
-; Total fan-out                               ; 67    ;
-; Average fan-out                             ; 2.31  ;
-+---------------------------------------------+-------+
++-------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                 ;
++---------------------------------------------+---------------+
+; Resource                                    ; Usage         ;
++---------------------------------------------+---------------+
+; Estimated Total logic elements              ; 72            ;
+;                                             ;               ;
+; Total combinational functions               ; 62            ;
+; Logic element usage by number of LUT inputs ;               ;
+;     -- 4 input functions                    ; 37            ;
+;     -- 3 input functions                    ; 18            ;
+;     -- <=2 input functions                  ; 7             ;
+;                                             ;               ;
+; Logic elements by mode                      ;               ;
+;     -- normal mode                          ; 62            ;
+;     -- arithmetic mode                      ; 0             ;
+;                                             ;               ;
+; Total registers                             ; 32            ;
+;     -- Dedicated logic registers            ; 32            ;
+;     -- I/O registers                        ; 0             ;
+;                                             ;               ;
+; I/O pins                                    ; 21            ;
+;                                             ;               ;
+; Embedded Multiplier 9-bit elements          ; 0             ;
+;                                             ;               ;
+; Maximum fan-out node                        ; CLOCK50~input ;
+; Maximum fan-out                             ; 32            ;
+; Total fan-out                               ; 339           ;
+; Average fan-out                             ; 2.49          ;
++---------------------------------------------+---------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; |DECODEUR                  ; 10 (10)             ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 6    ; 0            ; 0          ; |DECODEUR           ; DECODEUR    ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                          ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                    ; Entity Name        ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------+--------------------+--------------+
+; |integrationSysteme        ; 62 (0)              ; 32 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 21   ; 0            ; 0          ; |integrationSysteme                    ; integrationSysteme ; work         ;
+;    |DECODEUR:inst2|        ; 9 (9)               ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |integrationSysteme|DECODEUR:inst2     ; DECODEUR           ; work         ;
+;    |RECEPTEUR:inst|        ; 31 (31)             ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |integrationSysteme|RECEPTEUR:inst     ; RECEPTEUR          ; work         ;
+;    |emetteur:inst1|        ; 3 (3)               ; 11 (11)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |integrationSysteme|emetteur:inst1     ; emetteur           ; work         ;
+;    |serialtester:inst3|    ; 19 (19)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |integrationSysteme|serialtester:inst3 ; serialtester       ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; serialtester:inst3|s_reg[2]                        ; SW[9]               ; yes                    ;
+; serialtester:inst3|s_reg[1]                        ; SW[9]               ; yes                    ;
+; serialtester:inst3|s_reg[0]                        ; SW[9]               ; yes                    ;
+; serialtester:inst3|s_reg[3]                        ; SW[9]               ; yes                    ;
+; serialtester:inst3|s_reg[6]                        ; SW[9]               ; yes                    ;
+; serialtester:inst3|s_reg[5]                        ; SW[9]               ; yes                    ;
+; serialtester:inst3|s_reg[4]                        ; SW[9]               ; yes                    ;
+; serialtester:inst3|s_reg[7]                        ; SW[9]               ; yes                    ;
+; serialtester:inst3|s_reg[8]                        ; SW[9]               ; yes                    ;
+; Number of user-specified and inferred latches = 9  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -220,14 +250,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 7     ;
+; Total registers                              ; 32    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 7     ;
+; Number of registers using Synchronous Load   ; 1     ;
+; Number of registers using Asynchronous Clear ; 26    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 6     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; emetteur:inst1|SYNTHESIZED_WIRE_10     ; 16      ;
+; serialtester:inst3|cntr[3]             ; 6       ;
+; emetteur:inst1|DFF_inst2               ; 1       ;
+; emetteur:inst1|DFF_inst3               ; 1       ;
+; emetteur:inst1|DFF_inst4               ; 1       ;
+; emetteur:inst1|DFF_inst5               ; 1       ;
+; Total number of inverted registers = 6 ;         ;
++----------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -235,16 +280,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 6                           ;
-; cycloneiii_ff         ; 7                           ;
-;     CLR               ; 7                           ;
-; cycloneiii_lcell_comb ; 10                          ;
-;     normal            ; 10                          ;
-;         3 data inputs ; 3                           ;
-;         4 data inputs ; 7                           ;
+; boundary_port         ; 21                          ;
+; cycloneiii_ff         ; 32                          ;
+;     CLR               ; 25                          ;
+;     CLR SLD           ; 1                           ;
+;     ENA               ; 6                           ;
+; cycloneiii_lcell_comb ; 63                          ;
+;     normal            ; 63                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 18                          ;
+;         4 data inputs ; 37                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.40                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 1.87                        ;
 +-----------------------+-----------------------------+
 
 
@@ -263,24 +313,86 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Nov 26 17:32:16 2025
+    Info: Processing started: Thu Dec 04 17:39:22 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off laboratoire4 -c integrationSysteme
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file testbench_decodeur.vhd
+    Info (12022): Found design unit 1: TB_DEC-ARCH_TB File: C:/Users/niave/Downloads/lab4/TESTBENCH_DECODEUR.vhd Line: 10
+    Info (12023): Found entity 1: TB_DEC File: C:/Users/niave/Downloads/lab4/TESTBENCH_DECODEUR.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file serialtester.vhd
+    Info (12022): Found design unit 1: serialtester-rtl File: C:/Users/niave/Downloads/lab4/serialtester.vhd Line: 16
+    Info (12023): Found entity 1: serialtester File: C:/Users/niave/Downloads/lab4/serialtester.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file decodeur.vhd
-    Info (12022): Found design unit 1: DECODEUR-ARCH_DEC File: C:/Users/niave/Downloads/lab4/DECODEUR.vhd Line: 17
+    Info (12022): Found design unit 1: DECODEUR-ARCH_RECV File: C:/Users/niave/Downloads/lab4/DECODEUR.vhd Line: 17
     Info (12023): Found entity 1: DECODEUR File: C:/Users/niave/Downloads/lab4/DECODEUR.vhd Line: 4
-Info (12127): Elaborating entity "DECODEUR" for the top level hierarchy
+Info (12021): Found 2 design units, including 1 entities, in source file emetteur.vhd
+    Info (12022): Found design unit 1: emetteur-bdf_type File: C:/Users/niave/Downloads/lab4/emetteur.vhd Line: 36
+    Info (12023): Found entity 1: emetteur File: C:/Users/niave/Downloads/lab4/emetteur.vhd Line: 24
+Info (12021): Found 2 design units, including 1 entities, in source file recepteur.vhd
+    Info (12022): Found design unit 1: RECEPTEUR-ARCH_RECV File: C:/Users/niave/Downloads/lab4/Recepteur.vhd Line: 17
+    Info (12023): Found entity 1: RECEPTEUR File: C:/Users/niave/Downloads/lab4/Recepteur.vhd Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file integrationsysteme.bdf
+    Info (12023): Found entity 1: integrationSysteme
+Info (12127): Elaborating entity "integrationSysteme" for the top level hierarchy
+Info (12128): Elaborating entity "RECEPTEUR" for hierarchy "RECEPTEUR:inst"
+Info (12128): Elaborating entity "serialtester" for hierarchy "serialtester:inst3"
+Warning (10492): VHDL Process Statement warning at serialtester.vhd(27): signal "s_i" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/niave/Downloads/lab4/serialtester.vhd Line: 27
+Warning (10631): VHDL Process Statement warning at serialtester.vhd(22): inferring latch(es) for signal or variable "s_reg", which holds its previous value in one or more paths through the process File: C:/Users/niave/Downloads/lab4/serialtester.vhd Line: 22
+Warning (10492): VHDL Process Statement warning at serialtester.vhd(46): signal "seq" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/niave/Downloads/lab4/serialtester.vhd Line: 46
+Info (10041): Inferred latch for "s_reg[0]" at serialtester.vhd(22) File: C:/Users/niave/Downloads/lab4/serialtester.vhd Line: 22
+Info (10041): Inferred latch for "s_reg[1]" at serialtester.vhd(22) File: C:/Users/niave/Downloads/lab4/serialtester.vhd Line: 22
+Info (10041): Inferred latch for "s_reg[2]" at serialtester.vhd(22) File: C:/Users/niave/Downloads/lab4/serialtester.vhd Line: 22
+Info (10041): Inferred latch for "s_reg[3]" at serialtester.vhd(22) File: C:/Users/niave/Downloads/lab4/serialtester.vhd Line: 22
+Info (10041): Inferred latch for "s_reg[4]" at serialtester.vhd(22) File: C:/Users/niave/Downloads/lab4/serialtester.vhd Line: 22
+Info (10041): Inferred latch for "s_reg[5]" at serialtester.vhd(22) File: C:/Users/niave/Downloads/lab4/serialtester.vhd Line: 22
+Info (10041): Inferred latch for "s_reg[6]" at serialtester.vhd(22) File: C:/Users/niave/Downloads/lab4/serialtester.vhd Line: 22
+Info (10041): Inferred latch for "s_reg[7]" at serialtester.vhd(22) File: C:/Users/niave/Downloads/lab4/serialtester.vhd Line: 22
+Info (10041): Inferred latch for "s_reg[8]" at serialtester.vhd(22) File: C:/Users/niave/Downloads/lab4/serialtester.vhd Line: 22
+Info (12128): Elaborating entity "emetteur" for hierarchy "emetteur:inst1"
+Info (12128): Elaborating entity "DECODEUR" for hierarchy "DECODEUR:inst2"
+Info (13000): Registers with preset signals will power-up high File: C:/Users/niave/Downloads/lab4/emetteur.vhd Line: 65
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR[6]" is stuck at GND
+    Warning (13410): Pin "LEDR[5]" is stuck at GND
+    Warning (13410): Pin "LEDR[4]" is stuck at GND
+    Warning (13410): Pin "LEDR[3]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
+Warning (20013): Ignored 24 assignments for entity "CompNBits" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity CompNBits -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity CompNBits -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity CompNBits -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_PRESERVE_HIGH_SPEED_TILES ON -entity CompNBits -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IGNORE_SOURCE_FILE_CHANGES OFF -entity CompNBits -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ALWAYS_USE_QXP_NETLIST OFF -entity CompNBits -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_COLOR 16764057 -entity CompNBits -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -entity CompNBits -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -entity CompNBits -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -entity CompNBits -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -entity CompNBits -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -entity CompNBits -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -entity CompNBits -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ALLOW_MULTIPLE_PERSONAS OFF -entity CompNBits -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ASD_REGION_ID 1 -entity CompNBits -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name CROSS_BOUNDARY_OPTIMIZATIONS OFF -entity CompNBits -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_CONSTANTS_ON_INPUTS ON -entity CompNBits -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_INVERSIONS_ON_INPUTS ON -entity CompNBits -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS ON -entity CompNBits -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_INPUTS ON -entity CompNBits -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_BIDIRS ON -entity CompNBits -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity CompNBits -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity CompNBits -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity CompNBits -section_id Top was ignored
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 17 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 3 output pins
-    Info (21061): Implemented 11 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4859 megabytes
-    Info: Processing ended: Wed Nov 26 17:32:24 2025
+Info (21057): Implemented 93 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
+    Info (21059): Implemented 10 output pins
+    Info (21061): Implemented 72 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 34 warnings
+    Info: Peak virtual memory: 4858 megabytes
+    Info: Processing ended: Thu Dec 04 17:39:30 2025
     Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:06
 

@@ -1,0 +1,46 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity RECEPTEUR is
+
+    port(
+		  SEQ : in  std_logic:= '0' ;
+		  CLK : in  std_logic := '0';
+			S	: in std_logic;
+        C   : OUT  std_logic;
+		  B   : OUT  std_logic;
+		  A   : OUT  std_logic
+		  
+    );
+end DECODEUR;
+
+architecture ARCH_DEC of DECODEUR is
+signal FQ : std_logic_vector (4 downto 0);
+signal Q  : std_logic_vector(4 downto 0);
+begin
+FQ(4) <= (not S and not Q(4) and Q(3) and Q(2) and Q(1) and Q(0)) or (S and not Q(4) and Q(3) and Q(2) and not Q(1) and Q(0)) or (S and Q(4) and not Q(3) and Q(1)) or (not S and Q(4) and not Q(3) and not Q(1) and not Q(0)) or (Q(4) and not Q(3) and not Q(2) and Q(1)) or (Q(4) and not Q(3) and Q(2) and Q(0)) or (S and Q(4) and not Q(3) and not Q(2));
+FQ(3) <= (S and not Q(4) and not Q(3) and not Q(2) and Q(1) and Q(0)) or (S and not Q(4) and not Q(3) and Q(2) and not Q(1)) or (not S and not Q(4) and Q(3) and not Q(2) and Q(0)) or (not S and not Q(4) and Q(3) and Q(1) and not Q(0)) or (not S and not Q(4) and Q(3) and Q(2) and not Q(1)) or (S and not Q(4) and Q(3) and not Q(2) and not Q(1)) or (not Q(4) and Q(3) and Q(2) and not Q(1) and not Q(0));
+FQ(2) <= (not S and not Q(4) and not Q(2) and Q(1) and Q(0)) or (not S and not Q(4) and Q(2) and not Q(1)) or (not S and not Q(4) and Q(2) and not Q(0)) or (not Q(3) and Q(1) and Q(0)) or (not S and not Q(3) and Q(2) and not Q(1)) or (not Q(4) and Q(3) and Q(2) and not Q(1) and not Q(0)) or (Q(4) and not Q(3) and Q(2) and Q(0)) or (S and Q(4) and not Q(3) and Q(2) and Q(1));
+FQ(1) <= (not Q(4) and not Q(3) and not Q(2) and not Q(1) and not Q(0)) or (not S and not Q(4) and Q(3) and Q(1) and not Q(0)) or (not Q(3) and Q(2) and Q(1) and Q(0)) or (S and not Q(4) and not Q(3) and not Q(2) and not Q(0)) or (S and not Q(4) and not Q(3) and not Q(1) and not Q(0)) or (not Q(4) and Q(3) and Q(2) and not Q(1) and Q(0)) or (S and Q(4) and not Q(3) and Q(1) and Q(0)) or (S and Q(4) and not Q(3) and Q(2) and Q(1)) or (not S and not Q(4) and not Q(3) and Q(2) and Q(0)) or (not S and not Q(4) and not Q(3) and Q(2) and Q(1));
+FQ(0) <= (not S and not Q(3) and Q(2) and not Q(0)) or (not Q(3) and Q(2) and Q(1)) or (not Q(4) and Q(1) and not Q(0)) or (not Q(3) and Q(1) and not Q(0)) or (S and not Q(4) and Q(3) and Q(0)) or (Q(4) and not Q(3) and Q(2)) or (not Q(3) and not Q(2) and not Q(1) and Q(0)) or (not Q(4) and Q(3) and not Q(2) and not Q(1)) or (S and not Q(4) and not Q(2) and Q(0));
+
+process(CLK,SEQ)
+BEGIN
+IF SEQ  = '0' THEN 
+	 C <= '0';
+	 B <= '0';
+	 A <= '0';
+	 Q <= "0000";
+
+ELSIF SEQ = '1' THEN
+
+	IF RISING_EDGE(CLK) THEN
+		Q <= FQ;
+C <= (not Q(4) and not Q(3) and not Q(2) and not Q(1) and Q(0)) or (not Q(4) and not Q(3) and Q(2) and Q(1) and Q(0)) or (Q(4) and not Q(3) and not Q(2) and Q(1) and not Q(0)) or (Q(4) and not Q(3) and Q(2) and not Q(1) and Q(0));
+B <= (not Q(4) and not Q(3) and not Q(2) and not Q(1) and Q(0)) or (not Q(4) and Q(3) and Q(2) and not Q(1) and not Q(0)) or (Q(4) and not Q(3) and not Q(2) and not Q(0));
+A <= (not Q(4) and not Q(2) and not Q(1) and Q(0)) or (not Q(4) and not Q(3) and Q(2) and Q(1) and Q(0)) or (not Q(4) and Q(3) and Q(2) and not Q(1) and not Q(0));		 
+END IF;
+END IF;
+END PROCESS;
+
+end ARCH_DEC;

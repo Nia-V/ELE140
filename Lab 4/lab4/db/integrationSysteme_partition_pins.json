@@ -4,27 +4,71 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "C",
+					"name" : "LEDR[9]",
 					"strict" : false
 				},
 				{
-					"name" : "B",
+					"name" : "LEDR[8]",
 					"strict" : false
 				},
 				{
-					"name" : "A",
+					"name" : "LEDR[7]",
 					"strict" : false
 				},
 				{
-					"name" : "CLK",
+					"name" : "LEDR[2]",
 					"strict" : false
 				},
 				{
-					"name" : "SEQ",
+					"name" : "LEDR[1]",
 					"strict" : false
 				},
 				{
-					"name" : "S",
+					"name" : "LEDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK50",
+					"strict" : false
+				},
+				{
+					"name" : "SW[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[7]",
 					"strict" : false
 				}
 			]

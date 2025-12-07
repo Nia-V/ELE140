@@ -1,5 +1,5 @@
 Flow report for integrationSysteme
-Wed Nov 26 17:32:38 2025
+Thu Dec 04 17:39:44 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Nov 26 17:32:35 2025       ;
+; Flow Status                        ; Successful - Thu Dec 04 17:39:41 2025       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; integrationSysteme                          ;
-; Top-level Entity Name              ; DECODEUR                                    ;
+; Top-level Entity Name              ; integrationSysteme                          ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 12 / 49,760 ( < 1 % )                       ;
-;     Total combinational functions  ; 11 / 49,760 ( < 1 % )                       ;
-;     Dedicated logic registers      ; 7 / 49,760 ( < 1 % )                        ;
-; Total registers                    ; 7                                           ;
-; Total pins                         ; 6 / 360 ( 2 % )                             ;
+; Total logic elements               ; 71 / 49,760 ( < 1 % )                       ;
+;     Total combinational functions  ; 64 / 49,760 ( < 1 % )                       ;
+;     Dedicated logic registers      ; 32 / 49,760 ( < 1 % )                       ;
+; Total registers                    ; 32                                          ;
+; Total pins                         ; 21 / 360 ( 6 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                       ;
 ; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
@@ -66,26 +66,30 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/26/2025 17:32:17 ;
+; Start date & time ; 12/04/2025 17:39:22 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; integrationSysteme  ;
 +-------------------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                             ;
-+-------------------------------------+----------------------------------------+--------------------+-------------+------------+
-; Assignment Name                     ; Value                                  ; Default Value      ; Entity Name ; Section Id ;
-+-------------------------------------+----------------------------------------+--------------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 20271594681365.176419633729932         ; --                 ; --          ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --                 ; --          ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --                 ; --          ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --                 ; DECODEUR    ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --                 ; DECODEUR    ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --                 ; DECODEUR    ; Top        ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --                 ; --          ; --         ;
-; TOP_LEVEL_ENTITY                    ; DECODEUR                               ; integrationSysteme ; --          ; --         ;
-+-------------------------------------+----------------------------------------+--------------------+-------------+------------+
++-------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                        ;
++-------------------------------------+----------------------------------------+---------------+-------------+------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
++-------------------------------------+----------------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID               ; 20271594681365.176488796203208         ; --            ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; CompNBits   ; Top        ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; CompNBits   ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; CompNBits   ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --         ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --         ;
++-------------------------------------+----------------------------------------+---------------+-------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -93,11 +97,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4859 MB             ; 00:00:06                           ;
-; Fitter               ; 00:00:07     ; 1.0                     ; 6588 MB             ; 00:00:06                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 4682 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:01     ; 1.1                     ; 4949 MB             ; 00:00:01                           ;
-; Total                ; 00:00:18     ; --                      ; --                  ; 00:00:15                           ;
+; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4858 MB             ; 00:00:06                           ;
+; Fitter               ; 00:00:07     ; 1.1                     ; 6604 MB             ; 00:00:06                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 4685 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.1                     ; 4941 MB             ; 00:00:02                           ;
+; Total                ; 00:00:19     ; --                      ; --                  ; 00:00:16                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

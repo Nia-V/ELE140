@@ -1,39 +1,90 @@
-ibrary ieee;
+library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity TestBenchnum1 is
+entity TB_DEC is
 
-end entity TestBenchnum1;
+end entity TB_DEC;
 
 
-architecture testbench of TestBenchnum1 is
+architecture ARCH_TB of TB_DEC is
+	component DECODEUR 
 
-	signal A : unsigned (11 downto 0);
-	signal B : unsigned(11 downto 0);
-	signal S : unsigned(11 downto 0);
-
+	port (
+			SEQ : in std_logic;
+			S	 : in std_logic;
+			CLK : in std_logic;
+			C   : OUT  std_logic;
+			B   : OUT  std_logic;
+			A   : OUT  std_logic);
+	 end component;
+	 
+	 	component serialtester 
+	 port(
+        clock   : in    std_logic;
+        seq     : in    std_logic;
+        s_i     : in    std_logic_vector(8 downto 0);
+        s_o     : out   std_logic;
+        seq_o   : out   std_logic);
+	 end component;
+	signal S :   std_logic;
+	signal SEQ :   std_logic;
+	signal CLK :   std_logic;
+	signal SBUS   : std_logic_vector(8 downto 0);
+	signal C   :   std_logic;
+	signal B   :   std_logic;
+	signal A   :   std_logic;
+	constant PERIODE_HORLOGE: time := 20 ns;
 begin
+ 
+		process
+			begin
+			SBUS <= "000";
+				SEQ <= '0';
+				wait for  5 ns;
+				SEQ <= '1';
+	
+				for i in 0 to 8 loop
+             CLK<= '0';
+				 wait for 5 ns;
+				 CLK<= '1';
+				 wait for 5 ns;
+				end loop;
+				SEQ <= '0';
+				wait for 5 ns;
+				SBUS <= "11";
+				SEQ <= '1';
+				for i in 0 to 7 loop
+             CLK<= '0';
+				 wait for 5 ns;
+				 CLK<= '1';
+				 wait for 5 ns;
+				end loop;
+				wait for 1 ns;
+				SEQ <= '1';
+		wait;
+		end process;
+		 
+		  bruh : DECODEUR port map (
+				 SEQ => SEQ,
+				 S=>S,
+				 CLK => CLK,
+				 C => C,
+				 B => B,
+				 A => A);
 
-	main : process
-	begin
-	A <= to_unsigned(1000, 12);
-	B <= to_unsigned(50, 12);
-	wait for 20 ns;
-	A <= to_unsigned(1000, 12);
-	B <= to_unsigned(500, 12);
-	wait;
+
+ 
+		  bruh2 : serialtester port map (
+				 seq => SEQ,
+				 s_i => SBUS,
+				 clock => CLK,
+				 s_o => S;
+
+ 
+
+end architecture ARCH_TB;
 
 
-	end process;
 
-DUT : entity work.num1
 
-	port map (
-
-		entreeA => A,
-		entreeB => B,
-		sortieq => S
-	);
-
-end architecture testbench;

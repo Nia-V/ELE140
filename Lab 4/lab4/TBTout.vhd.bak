@@ -1,0 +1,69 @@
+#============================= Tb_systeme_complete.do ======================================
+#ELE140 Conception des syst�mes numeriques
+#AUT2025, Ecole de technologie superieure
+#Redige par Myiah Catwell, 2025-12-02
+#================================================================================
+#Clean up
+vlib work
+vdel -all work
+vlib work
+vmap work work
+
+# Compilation de tous les fichiers en ordre hierarchique
+
+vcom serialtester.vhd
+vcom decodeur.vhd
+vcom emetteur.vhd
+vcom recepteur.vhd
+vcom integrationMaterielle2.vhd
+
+vcom tb_systeme.vhd
+
+
+
+# Declaration de l'entite a simuler
+vsim tb_systeme
+
+
+
+#SW
+add wave tb_systeme/SW
+#CLOCK
+add wave tb_systeme/CLOCK50
+#S
+add wave tb_systeme/DUT/S
+#SEQ
+add wave tb_systeme/DUT/SEQ
+#DECODEUR Q
+add wave tb_systeme/DUT/b2v_inst2/Q
+#DECODEUR QF
+add wave tb_systeme/DUT/b2v_inst2/QF
+#C
+add wave tb_systeme/DUT/b2v_inst2/C
+#B
+add wave tb_systeme/DUT/b2v_inst2/B
+#A
+add wave tb_systeme/DUT/b2v_inst2/A
+#SEQ
+add wave tb_systeme/DUT/SEQ
+#TX
+add wave tb_systeme/DUT/SYNTHESIZED_WIRE_0
+#RECEPTEUR Q
+add wave tb_systeme/DUT/b2v_inst4/Q
+#C
+add wave tb_systeme/DUT/b2v_inst4/C
+#B
+add wave tb_systeme/DUT/b2v_inst4/B
+#A
+add wave tb_systeme/DUT/b2v_inst4/A
+
+configure wave -namecolwidth 300
+configure wave -namecolwidth 100
+update
+
+
+run 3000 ns
+
+
+# Zoomer sur la periode de simulation
+wave zoom full
